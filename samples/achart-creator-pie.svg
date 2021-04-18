@@ -1,0 +1,94 @@
+<svg viewBox="0 0 700 550" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="graphics-document">
+  <rect id="backdrop" width="700" height="550" fill="#fff"></rect>
+  <g id="ChartRoot" role="chart" tabindex="0" transform="translate(50,100)" aria-labelledby="title" aria-charttype="pie" aria-roledescription="Pie Chart" font-size="10">
+    <rect role="chartarea" width="400" height="400" fill="none"></rect>
+    <text id="title" role="heading" text-anchor="middle" font-size="14" x="300" y="-25">
+      Amount 2013 by Fruit
+    </text>
+    <g id="pie-chart" transform="translate(200,200)" role="dataset" aria-labelledby="dataset-title" tabindex="0">
+      <title role="heading" id="dataset-title">
+        Amount 2013
+      </title>
+      <g role="datapoint" tabindex="0" aria-labelledby="legenditem1">
+        <path d="M1.225e-14,-200A200,200,0,0,1,131.245,-150.913L0,0Z" fill="#66c2a5" stroke="black" style="opacity: 0.7;"></path>
+        <text transform="translate(45.54,-121.762)" dy="15" style="text-anchor: middle;" role="datavalue" id="value1">
+          9
+        </text>
+        <text id="percentage1" transform="translate(45.54,-121.762)" dy="30" style="text-anchor: middle;">
+          (11.4 %)
+        </text>
+      </g>
+      <g role="datapoint" tabindex="0" aria-labelledby="legenditem2">
+        <path d="M131.245,-150.913A200,200,0,0,1,148.274,134.22L0,0Z" fill="#fc8d62" stroke="black" style="opacity: 0.7;"></path>
+        <text transform="translate(129.769,-7.75)" dy="15" style="text-anchor: middle;" role="datavalue" id="value2">
+          20
+        </text>
+        <text id="percentage2" transform="translate(129.769,-7.75)" dy="30" style="text-anchor: middle;">
+          (25.3 %)
+        </text>
+      </g>
+      <g role="datapoint" tabindex="0" aria-labelledby="legenditem3">
+        <path d="M148.274,134.22A200,200,0,0,1,-199.96,3.976L0,0Z" fill="#8da0cb" stroke="black" style="opacity: 0.7;"></path>
+        <text transform="translate(-45.54,121.762)" dy="15" style="text-anchor: middle;" role="datavalue" id="value3">
+          30
+        </text>
+        <text id="percentage3" transform="translate(-45.54,121.762)" dy="30" style="text-anchor: middle;">
+          (38 %)
+        </text>
+      </g>
+      <g role="datapoint" tabindex="0" aria-labelledby="legenditem4">
+        <path d="M-199.96,3.976A200,200,0,0,1,-163.194,-115.618L0,0Z" fill="#e78ac3" stroke="black" style="opacity: 0.7;"></path>
+        <text transform="translate(-124.261,-38.201)" dy="15" style="text-anchor: middle;" role="datavalue" id="value4">
+          8
+        </text>
+        <text id="percentage4" transform="translate(-124.261,-38.201)" dy="30" style="text-anchor: middle;">
+          (10.1 %)
+        </text>
+      </g>
+      <g role="datapoint" tabindex="0" aria-labelledby="legenditem5">
+        <path d="M-163.194,-115.618A200,200,0,0,1,-3.674e-14,-200L0,0Z" fill="#a6d854" stroke="black" style="opacity: 0.7;"></path>
+        <text transform="translate(-59.709,-115.477)" dy="15" style="text-anchor: middle;" role="datavalue" id="value5">
+          12
+        </text>
+        <text id="percentage5" transform="translate(-59.709,-115.477)" dy="30" style="text-anchor: middle;">
+          (15.2 %)
+        </text>
+      </g>
+    </g>
+    <g role="legend" aria-roledescription="Legend" font-size="10" font-family="sans-serif" text-anchor="start" tabindex="0" aria-labelledby="legend-title" transform="translate(408, 20)">
+      <text role="heading" font-size="12" id="legend-title">
+        Fruit
+      </text>
+      <g role="legenditem" id="legenditem1" transform="translate(0,15)" tabindex="0">
+        <rect x="5" y="-5" width="10" height="10" fill="#66c2a5"></rect>
+        <text x="25" alignment-baseline="middle">
+          Apples
+        </text>
+      </g>
+      <g role="legenditem" id="legenditem2" transform="translate(0,30)" tabindex="0">
+        <rect x="5" y="-5" width="10" height="10" fill="#fc8d62"></rect>
+        <text x="25" alignment-baseline="middle">
+          Bananas
+        </text>
+      </g>
+      <g role="legenditem" id="legenditem3" transform="translate(0,45)" tabindex="0">
+        <rect x="5" y="-5" width="10" height="10" fill="#8da0cb"></rect>
+        <text x="25" alignment-baseline="middle">
+          Grapefruits
+        </text>
+      </g>
+      <g role="legenditem" id="legenditem4" transform="translate(0,60)" tabindex="0">
+        <rect x="5" y="-5" width="10" height="10" fill="#e78ac3"></rect>
+        <text x="25" alignment-baseline="middle">
+          Lemons
+        </text>
+      </g>
+      <g role="legenditem" id="legenditem5" transform="translate(0,75)" tabindex="0">
+        <rect x="5" y="-5" width="10" height="10" fill="#a6d854"></rect>
+        <text x="25" alignment-baseline="middle">
+          Oranges
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>

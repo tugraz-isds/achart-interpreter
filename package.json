@@ -1,0 +1,57 @@
+{
+  "name": "AChartInterpreter",
+  "version": "1.0.0",
+  "description": "screen reader for SVG charts",
+  "main": "build/achart-interpreter.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://git.iicm.tugraz.at:kandrews/achart-interpreter.git"
+  },
+  "keywords": [
+    "accessibility",
+    "screen reader",
+    "data visualisation",
+    "charts",
+    "SVG"
+  ],
+  "scripts": {
+    "electron": "electron electron/elec.js dev",
+    "start": "electron electron/elec.js",
+    "create-package-all": "node electron/package-build.js",
+    "create-package-linux": "node electron/package-build.js linux",
+    "create-package-mac": "node electron/package-build.js mac",
+    "create-package-win": "node electron/package-build.js win",
+    "create-installer-deb": "node electron/installer-deb.js",
+    "create-installer-rpm": "node electron/installer-rpm.js",
+    "create-installer-dmg": "node electron/installer-dmg.js",
+    "create-installer-win": "node electron/installer-win.js"
+  },
+  "author": "Christopher Kopel, tu-graz",
+  "license": "MIT",
+  "devDependencies": {
+    "del": "^6.0.0",
+    "electron-packager": "^15.1.0",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "merge2": "^1.4.1",
+    "nexe": "^3.3.7",
+    "path": "^0.12.7",
+    "tmp": "^0.2.1",
+    "typescript": "^4.0.3",
+    "webpack": "^5.1.3",
+    "webpack-stream": "^6.1.0"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.13",
+    "electron": "^10.1.3",
+    "fs": "0.0.1-security",
+    "jsdom": "^16.4.0"
+  },
+  "optionalDependencies": {
+    "electron-installer-debian": "^3.0.0",
+    "electron-installer-dmg": "^3.0.0",
+    "electron-installer-redhat": "^3.0.0",
+    "electron-winstaller": "^4.0.1"
+  }
+}
