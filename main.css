@@ -1,0 +1,386 @@
+/* --------------------------- Global ---------------------------- */
+
+:root {
+  --fonts: "Open Sans", "DejaVu Sans", Verdana, Arial, sans-serif;
+  --global-margin: 2rem;
+}
+
+body {
+  margin: var(--global-margin);
+  font-family: var(--fonts);
+  overflow-y: scroll;
+}
+
+/* ----------------------- Header top menu ----------------------- */
+
+/*
+ * The top menu is a grid container containing three items:
+ * 1. The logo
+ * 2. The buttons container
+ * 3. The hamburger menu button
+ *
+ * The buttons container itself is a grid container containing 
+ * the six buttons as elements
+ *
+ * The classes show and hide are used to show or hide the buttons
+ * according to screen width. These can just be set programmatically
+ * to work with the hamburger menu button. The actual styling of the
+ * classes is done here.
+ */
+
+#header_container {
+  background: #2A9D8F;
+  padding: 1em;
+  margin-bottom: 1em;
+  /* Revert global body margin, easiest way */
+  margin-top: calc(-1 * var(--global-margin));
+  margin-left: calc(-1 * var(--global-margin));
+  margin-right: calc(-1 * var(--global-margin));
+}
+
+.header_grid {
+  display: grid;
+  grid-gap: 0rem;
+  grid-template-columns: 2vw 1fr 10fr 1fr 2vw;
+}
+
+#logo {
+  grid-column: 2;
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+  margin-right: 1em;
+}
+
+#logo_text {
+  font-size: 2em;
+}
+
+.header_grid_buttons {
+  grid-column: 3;
+}
+
+#hamburger_menu_button {
+  grid-column: 4;
+  justify-self: end;
+  background-color: transparent;
+  border: none;
+  color: black;
+  padding: 0.5em;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.header_grid_buttons {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: repeat(5, 1fr);
+  transition: max-height 0.2s ease-out;
+  overflow: hidden;
+}
+
+.header_grid_buttons > * {
+  padding: 0.5rem;
+}
+
+.header_grid_buttons.show {
+  max-height: 100%;
+  height: unset;
+}
+
+.header_grid_buttons.hide {
+  max-height: 0;
+}
+
+/* Special attention for Chrome's select menu */
+#remote_file_list {
+  width: 100%;
+}
+
+/* Hide the actual file upload button beneath the styled div */
+input[type="file"] {
+  display: none;
+}
+
+.header_item_button {
+  background-color: #254552;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.header_item_button:hover {
+  background-color: #2e5666;
+  color: white;
+}
+
+/* Accordion handled in achart-interpreter.ts */
+#about_text {
+  padding: 0 1.125em;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+
+#placeholder_text {
+  margin: 0 0 1rem 0;
+  padding-left: 8rem;
+  width: auto;
+}
+
+
+
+
+/* menu bar on narrow window */
+
+@media screen and (max-width: 50em) {
+  .header_grid_buttons {
+    grid-row: 2;
+    grid-column: 2 / 5;
+  }
+
+  .header_grid_buttons {
+    grid-template-columns: 1fr;
+    align-content: space-evenly;
+  }
+
+  .header_grid_buttons {
+    max-height: 0;
+    height: 0;
+  }
+
+  #placeholder_text {
+    padding-left: 0;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+/* wide */
+/*
+@media screen and (min-width: 43em) {
+  #hamburger_menu_button {
+    display: none;
+  }
+}
+*/
+
+
+
+
+
+/* -------------- Graphic Panel and Text Panel ----------------- */
+
+#grid_container {
+  height: 75vh;
+  display: grid;
+  gap: 1rem 1rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+#grid_container > div {
+  background: linen;
+  padding: 1rem;
+  border-radius: 1rem;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+.text_root {
+  display: block;
+  margin: 0.2rem;
+}
+
+address, blockquote, body, caption, center, dd, dir, div, dl, dt, form, h2, h3,
+h4, h5, h6, menu, ol, p, td, th, ul {
+  font-size: 1em;
+}
+
+h1 {
+  margin: 0 0 1em 0;
+  font-size: 1.5em;
+}
+
+h2 {
+  margin: 0 0 0.5em 0;
+  font-size: 1.2em;
+}
+
+h3 {
+  margin: 0 0 0.5em 0;
+  font-size: 1em;
+}
+
+*:not(.no_highlight):focus {
+  outline-color: lightcoral;
+  outline-style: dotted;
+  outline-width: medium;
+} 
+
+.mask_highlight {
+  mask: url(#mask-stripe);
+}
+
+.outline_highlight {
+  outline-style: dotted;
+  outline-width: medium;
+  outline-color: lightcoral;
+}
+
+#text_highlight {
+  outline-style: dotted;
+  outline-width: medium;
+  outline-color: lightcoral;
+}
+
+.outlinewidth {
+  width: fit-content;
+}
+
+summary.outlinewidth {
+  margin: 0.5em 0 0.2em 0;
+}
+
+
+
+.context_menu {
+  position: absolute;
+  z-index: 9999;
+  background-color: #f1f1f1;
+  border: thin solid;
+  width: max-content;
+}
+
+.context_menu_item {
+  color: black;
+  padding: 12px 16px;
+  text-align: left;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+
+button.selected {
+  background-color: lightcoral;
+}
+
+ol {
+  list-style: none;
+}
+
+/*ol > li:before {
+  content: attr(seq) ". ";
+}*/
+
+
+
+
+/* ------------------ Highlighting Mode Toggle button -------------------- */
+
+#highlighting {
+  margin: 1rem 0 1rem 0;
+}
+
+.switch {
+  position: relative;
+  height: 1.125em;
+  width: 2em;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+  display: inline-block;
+  top: 0.2em;
+}
+
+/* Hide HTML checkbox */
+.switch input {
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.slider {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  cursor: pointer;
+  background-color: gray;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 0.75em;
+  width: 0.75em;
+  left: 0.250em;
+  bottom: 0.15em;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider:before {
+  transform: translateX(0.75em);
+  -ms-transform: translateX(0.75em);
+  -webkit-transform: translateX(0.75em);
+}
+
+.slider.round {
+  border-radius: 1.125em;
+  bottom: 0.1em;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+} 
+
+.toggle_text {
+  display: inline-block;
+}
+
+
+.details {
+  display: block;
+  padding: 0.5em;
+  border: solid;
+  position: fixed;
+  top: 15%;
+  left: 15%;
+  width: 70vw;
+  height: 70vh;
+  z-index: 1;
+  background-color: #f1f1f1;
+  overflow: hidden;
+}
+
+.details > article {
+  display: block;
+  height: 100%;
+  overflow: hidden;
+}
+
+.scrollable_container {
+  display: block;
+/*  padding: 1em; */
+  height: 90%;
+  overflow: auto;
+}
+
+.close_button {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  float: right;
+}

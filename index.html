@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-uk">
+<head>
+  <title>AChart Interpreter</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="img-src 'self' data;" />
+  <script src="achart-interpreter.js"></script>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="font-awesome.min.css">
+</head>
+
+<body>
+  
+  <header>
+    
+    <div class="header_grid" id="header_container">
+      
+      <div id="logo"><span id="logo_text">ACI</span></div>
+      
+      <div class="header_grid_buttons" id="header_container_buttons">
+        
+        <select class="header_item_button no_highlight" id="remote_file_list">
+          <option value=""></option>
+        </select>
+        
+        <button class="header_item_button no_highlight"
+            id="local_file_button_proxy"></button>
+        <input id="local_file_button" type="file" accept="image/svg+xml"/>
+        
+      </div>
+      
+      <button id="hamburger_menu_button" class="no_highlight">
+
+<span class="fa5-bars">
+<svg style="width:0.7em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg>
+</span>
+
+      </button>
+    </div>
+    
+  </header>
+
+  
+  <div id="placeholder_text" tabindex="0">
+
+<span class="fa5-arrow-up" aria-hidden="true">
+<svg style="width:0.7em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg>
+</span>
+
+  </div>
+  
+  
+  <div id="grid_container" class="grid">
+    
+    <div id="graphic_panel">
+      <h2 class="outlinewidth" tabindex="0"></h2>
+    </div>
+    
+    <div id="text_panel" aria-labelledby="text_panel_title">
+      <h2 id="text_panel_title" tabindex="0" class="outlinewidth"></h2>
+    </div>
+    
+  </div>
+  
+</body>
+</html>
