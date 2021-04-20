@@ -1,0 +1,74 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 500 410" tabindex="0">
+  <title>Accessible SVG Bar Chart</title>  
+
+  <g id="ChartRoot" font-family="Arial" role="chart" aria-charttype="bar" tabindex="0">
+    <title role="heading">Finished tasks per day</title>  
+    <g>
+      <rect id="backdrop" x="0" y="0" width="540" height="410" fill="#fff"></rect>
+      <rect role="chartarea" x="65" y="35" width="445" height="335" fill="none"></rect>
+    </g>
+
+    <g id="xScale" role="xaxis" aria-axistype="category" tabindex="0" display="inline">
+      <title role="heading">Days</title>
+      <g>
+        <line x1="176" y1="370" x2="176" y2="375" stroke="black" stroke-width="2"></line>
+        <text role="axislabel" id="x-Friday" x="121" y="388" font-size="14" text-anchor="middle">Friday</text>
+      </g>
+      <g>
+        <line x1="287" y1="370" x2="287" y2="375" stroke="black" stroke-width="2" ></line>
+        <text role="axislabel" id="x-Saturday" x="232" y="388" font-size="14" text-anchor="middle">Saturday</text>
+      </g>
+      <g>
+        <line x1="399" y1="370" x2="399" y2="375" stroke="black" stroke-width="2"></line>
+        <text role="axislabel" id="x-Sunday" x="343" y="388" font-size="14" text-anchor="middle">Sunday</text>
+      </g>
+   
+    </g>
+
+
+    <g id="yScale" display="inline">
+      
+      <g id="y-axis-labels" role="yaxis" aria-valuemin="1" aria-valuemax="10" tabindex="0">
+         <text x="15" y="222" font-size="20" pointer-events="none" text-anchor="middle" transform="rotate(-90,15,202)" role="heading">Finished Tasks</text>
+         <text role="axislabel" id="y-1" x="55" y="347" font-size="13" text-anchor="end">1</text>
+         <text role="axislabel" id="y-2" x="55" y="318" font-size="13" text-anchor="end">2</text>
+         <text role="axislabel" id="y-3" x="55" y="290" font-size="13" text-anchor="end">3</text>
+         <text role="axislabel" id="y-4" x="55" y="263" font-size="13" text-anchor="end">4</text>
+         <text role="axislabel" id="y-5" x="55" y="235" font-size="13" text-anchor="end">5</text>
+         <text role="axislabel" id="y-6" x="55" y="207" font-size="13" text-anchor="end">6</text>
+         <text role="axislabel" id="y-7" x="55" y="179" font-size="13" text-anchor="end">7</text>
+         <text role="axislabel" id="y-8" x="55" y="151" font-size="13" text-anchor="end">8</text>
+         <text role="axislabel" id="y-9" x="55" y="123" font-size="13" text-anchor="end">9</text>
+         <text role="axislabel" id="y-10" x="55" y="95" font-size="13" text-anchor="end">10</text>
+       
+      </g>
+
+</g>
+    <g id="dataarea" role="dataset">
+      <g id="datapoint_0" role="datapoint" tabindex="0" fill="rgb(97, 115, 169)" stroke="rgb(0, 0, 49)" stroke-width="2">
+	  <title role="datavalue" aria-labelledby="x-Friday">8 Tasks</title>
+       
+    <path d="M83,147 H158 V370 H83 V147"></path> 
+		
+      </g>
+      
+      <g id="datapoint_1" role="datapoint" tabindex="0" fill="rgb(255, 250, 5)" stroke="rgb(21, 46, 0)" stroke-width="2" >
+	  <title role="datavalue" aria-labelledby="x-Saturday">10 Tasks</title>
+      
+        <path d="M195,95 H267 V370 H195 V95"></path>
+      </g>
+      
+      <g id="datapoint_2" role="datapoint" tabindex="0" fill="rgb(255, 45, 59)" stroke="rgb(32, 0, 0)" stroke-width="2">
+        <title role="datavalue" aria-labelledby="x-Sunday">4 Tasks</title>
+         <path d="M306,263 H380 V370 H306 V263"></path>
+      </g>
+      
+      
+    </g>
+
+    <line id="xAxis" x1="60" y1="370" x2="398" y2="370" stroke="black" stroke-width="3"  pointer-events="none" display="inline"></line>
+    <line id="yAxis" x1="65" y1="35" x2="65" y2="375" stroke="black" stroke-width="3"  pointer-events="none" display="inline"></line>
+    
+  </g>
+</svg>

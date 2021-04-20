@@ -1,0 +1,359 @@
+<svg version="1.1" xml:lang="en" lang="en"
+  aria-labelledby="title desc"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 190 750 346">
+
+<!-- still have to fix these style defs -->
+<defs>
+<style type="text/css">
+  <![CDATA[
+  .chart-title {fill: black; font-family:Verdana; font-size:9pt;}
+  .chart-label {fill: black; font-family:Verdana; font-size:7.5pt;}
+  .chart-line{fill:black; stroke:#000000;}
+  .marker-square {fill:#BF8266; fill-opacity:0; stroke:#BF8266; stroke-width:2px; width:8px; height:8px;}
+  .chart-lineA {fill:none; stroke:#BF8266;}
+  .chart-lineB {fill:none; stroke:#645EDA;}
+  .marker-diamond{fill:#645EDA; fill-opacity:0; stroke:#645EDA; stroke-width:2px;}
+  ]]>
+</style>
+</defs>
+
+
+<g role="chart" aria-charttype="line" tabindex="0">
+
+<title role="heading">Chart of Sales</title>
+
+<desc>
+Line chart of sales for 12 months in year 2012 for Salespersons A and B.
+</desc>
+
+
+<!-- Y Axis -->
+
+<g role="yaxis" aria-valuemin="15000" aria-valuemax="40000" tabindex="0">
+
+<line class="chart-line" x1="98" y1="443" x2="98" y2="212"/>
+
+<text role="heading" transform="matrix(0 -1 1 0 20 355)"
+  class="chart-title">Sales in €</text>
+
+<g>
+<text role="axislabel" transform="matrix(1 0 0 1 38 215)"
+  class="chart-label">40,000</text>
+<line class="chart-line" x1="98" y1="212" x2="93" y2="212"/> 
+</g>
+
+<g>
+<text role="axislabel" transform="matrix(1 0 0 1 38 262)"
+  class="chart-label">35,000</text>
+<line class="chart-line" x1="98" y1="258" x2="93" y2="258"/>
+</g>
+      
+<g>
+<text role="axislabel" transform="matrix(1 0 0 1 38 308)"
+  class="chart-label">30,000</text>
+<line class="chart-line" x1="98" y1="305" x2="93" y2="305"/>
+</g>
+
+<g>
+<text role="axislabel" transform="matrix(1 0 0 1 38 354)"
+  class="chart-label">25,000</text>
+<line class="chart-line" x1="98" y1="350" x2="93" y2="350"/>
+</g>
+
+<g>
+<text role="axislabel" transform="matrix(1 0 0 1 38 400)"
+  class="chart-label">20,000</text>
+<line class="chart-line" x1="98" y1="397" x2="93" y2="397"/>
+</g>
+
+<g>
+<text role="axislabel" transform="matrix(1 0 0 1 38 445)"
+  class="chart-label">15,000</text>
+<line class="chart-line" x1="98" y1="443" x2="93" y2="443"/>
+</g>
+   
+</g>
+
+
+
+
+<!-- X Axis -->  
+
+<g role="xaxis" aria-axistype="category" tabindex="0">
+
+<line class="chart-line" x1="98" y1="443" x2="677" y2="443"/> 
+
+<text role="heading" transform="matrix(1 0 0 1 383 525)"
+  class="chart-title">Month</text>
+
+<g>
+<text role="axislabel" id="x-2012-01"
+  transform="matrix(0.7 0.7 -0.7 0.7 102 466)"
+  class="chart-label">January 2012</text>
+<line class="chart-line" x1="98" y1="443" x2="98" y2="448"/>
+</g>
+
+<g>
+<text role="axislabel" id="x-2012-02"
+  transform="matrix(0.7 0.7 -0.7 0.7 155 466)"
+  class="chart-label">February 2012</text>
+<line class="chart-line" x1="150" y1="443" x2="150" y2="448"/>
+</g>
+
+<g>
+<text role="axislabel" id="x-2012-03"
+  transform="matrix(0.7 0.7 -0.7 0.7 208 466)"
+  class="chart-label">March 2012</text>
+<line class="chart-line" x1="203" y1="443" x2="203" y2="448"/>
+</g>
+
+<g>
+<text role="axislabel" id="x-2012-04"
+  transform="matrix(0.7 0.7 -0.7 0.7 260 466)"
+  class="chart-label">April 2012</text>
+<line class="chart-line" x1="255" y1="443" x2="255" y2="448"/>
+</g>
+
+<g>
+<text role="axislabel" id="x-2012-05"
+  transform="matrix(0.7 0.7 -0.7 0.7 313 466)"
+  class="chart-label">May 2012</text>
+<line class="chart-line" x1="308" y1="443" x2="308" y2="448"/>
+</g>
+
+<g>
+<text role="axislabel" id="x-2012-06"
+  transform="matrix(0.7 0.7 -0.7 0.7 365 466)"
+  class="chart-label">June 2012</text>
+<line class="chart-line" x1="360" y1="443" x2="360" y2="448"/>
+</g>
+
+<g>
+<text role="axislabel" id="x-2012-07"
+  transform="matrix(0.7 0.7 -0.7 0.7 418 466)"
+  class="chart-label">July 2012</text>
+<line class="chart-line" x1="413" y1="443" x2="413" y2="448"/>
+</g>
+
+<g>
+<text role="axislabel" id="x-2012-08"
+  transform="matrix(0.7 0.7 -0.7 0.7 470 466)"
+  class="chart-label">August 2012</text>
+<line class="chart-line" x1="466" y1="443" x2="466" y2="448"/>
+</g>
+
+<g>
+<text role="axislabel" id="x-2012-09"
+  transform="matrix(0.7 0.7 -0.7 0.7 523 466)"
+  class="chart-label">September 2012</text>
+<line class="chart-line" x1="519" y1="443" x2="519" y2="448"/>
+</g>
+
+<g>
+<text role="axislabel" id="x-2012-10"
+  transform="matrix(0.7 0.7 -0.7 0.7 576 466)"
+  class="chart-label">October 2012</text>
+<line class="chart-line" x1="571" y1="443" x2="571" y2="448"/>
+</g>
+
+<g>
+<text role="axislabel" id="x-2012-11"
+  transform="matrix(0.7 0.7 -0.7 0.7 629 466)"
+  class="chart-label">November 2012</text>
+<line class="chart-line" x1="624" y1="443" x2="624" y2="448"/>
+</g>
+
+<g>
+<text role="axislabel" id="x-2012-12"
+  transform="matrix(0.7 0.7 -0.7 0.7 681 466)"
+  class="chart-label">December 2012</text>
+<line class="chart-line" x1="677" y1="443" x2="677" y2="448"/>
+</g>
+
+</g>
+
+
+
+
+<!-- Data Points A -->
+
+<g id="data-a" role="dataset">
+
+<g id="legend-a" aria-labelledby="legend-text-a" tabindex="0">
+<rect class="marker-square" x="168" y="210" />
+<text id="legend-text-a" x="185" y="220"
+  font-family="Verdana" font-size="14">Salesperson A</text>
+</g>
+
+<polyline points="
+ 98,319 150,331
+150,331 203,309                             
+203,309 255,280
+255,280 308,322
+308,322 361,303
+361,303 413,375
+413,375 466,382
+466,382 519,353
+519,353 571,315
+571,315 624,298
+624,298 677,246
+" class="chart-lineA" />
+
+<g role="datapoint" tabindex="0">
+  <title role="datavalue" aria-labelledby="x-2012-01">28366</title>
+  <rect x="93" y="315" class="marker-square" /> 
+</g>
+
+<g role="datapoint" tabindex="0">
+  <title role="datavalue" aria-labelledby="x-2012-02">27050</title>
+  <rect x="146" y="327" class="marker-square" /> 
+</g>
+
+<g role="datapoint" tabindex="0">
+  <title role="datavalue" aria-labelledby="x-2012-03">29463</title>
+  <rect x="199" y="305" class="marker-square"/>
+</g>
+
+<g role="datapoint" tabindex="0">
+  <title role="datavalue" aria-labelledby="x-2012-04">32561</title>
+  <rect x="251" y="276" class="marker-square"/>
+</g>
+
+<g role="datapoint" tabindex="0">
+  <title role="datavalue" aria-labelledby="x-2012-05">28050</title>
+  <rect x="304" y="318" class="marker-square"/>
+</g>
+
+<g role="datapoint" tabindex="0">
+  <title role="datavalue" aria-labelledby="x-2012-06">30100</title>
+  <rect x="357" y="299" class="marker-square"/>
+</g>
+
+<g role="datapoint" tabindex="0">
+  <title role="datavalue" aria-labelledby="x-2012-07">22343</title>
+  <rect x="409" y="371" class="marker-square"/>
+</g>
+
+<g role="datapoint" tabindex="0">
+  <title role="datavalue" aria-labelledby="x-2012-08">21506</title>
+  <rect x="462" y="378" class="marker-square"/>
+</g>
+
+<g role="datapoint" tabindex="0">
+  <title role="datavalue" aria-labelledby="x-2012-09">24664</title>
+  <rect x="515" y="349" class="marker-square"/>
+</g>
+
+<g role="datapoint" tabindex="0">
+  <title role="datavalue" aria-labelledby="x-2012-10">28842</title>
+  <rect x="567" y="311" class="marker-square"/>
+</g>
+
+<g role="datapoint" tabindex="0">
+  <title role="datavalue" aria-labelledby="x-2012-11">30621</title>
+  <rect x="620" y="294" class="marker-square"/>
+</g>
+
+<g role="datapoint" tabindex="0">
+  <title role="datavalue" aria-labelledby="x-2012-12">36254</title>
+  <rect x="673" y="242" class="marker-square"/> 
+</g>
+
+</g>
+
+
+
+
+
+<!-- Data Points B -->
+  
+<g id="data-b" role="dataset">
+
+<g id="legend-b" aria-labelledby="legend-text-b" tabindex="0">
+<path class="marker-diamond" d="M321,210 l5,5 l-5,5 l-5,-5 L321,210"/>
+<text id="legend-text-b" x="334" y="220"
+  font-family="Verdana" font-size="14">Salesperson B</text>
+</g>
+
+
+<polyline points="
+ 97,366 150,380
+150,380 203,361
+203,361 255,316
+255,316 308,359
+308,359 361,340
+361,340 413,405
+413,405 466,415
+466,415 519,402
+519,402 571,364
+571,364 624,342
+624,342 677,318
+" class="chart-lineB" />
+
+<g role="datapoint" tabindex="0">
+  <title role="datavalue" aria-labelledby="x-2012-01">23274 euros</title>
+  <path class="marker-diamond" d="M97,362 l4,4 l-4,4 l-4-4 L97,362"/>
+</g>
+
+<g role="datapoint" tabindex="0">
+  <title role="datavalue" aria-labelledby="x-2012-02">21732</title>
+  <path class="marker-diamond" d="M150,376 l4,4 l-4,4 l-4-4 L150,376"/>
+</g>
+     
+<g role="datapoint" tabindex="0">
+  <title role="datavalue" aria-labelledby="x-2012-03">23845</title>
+  <path class="marker-diamond" d="M203,357 l4,4 l-4,4 l-4-4 L203,357"/>
+</g>
+
+<g role="datapoint" tabindex="0">
+  <title role="datavalue" aria-labelledby="x-2012-04">28732</title>
+  <path class="marker-diamond" d="M255, 312 l4,4 l-4,4 l-4-4 L255,312"/>
+</g>
+
+<g role="datapoint" tabindex="0">
+  <title role="datavalue" aria-labelledby="x-2012-05">24023</title>
+  <path class="marker-diamond" d="M308,355 l4,4 l-4,4 l-4-4 L308,355"/>
+</g>
+
+<g role="datapoint" tabindex="0">
+  <title role="datavalue" aria-labelledby="x-2012-06">26089</title>
+  <path class="marker-diamond" d="M361,336   l4,4 l-4,4  l-4-4 L361,336"/>
+</g>
+
+<g role="datapoint" tabindex="0">
+  <title role="datavalue" aria-labelledby="x-2012-07">19026</title>
+  <path class="marker-diamond" d="M413,401 l4,4 l-4,4 l-4-4 L413,401"/>
+</g>
+
+<g role="datapoint" tabindex="0">
+  <title role="datavalue" aria-labelledby="x-2012-08">17903</title>
+  <path class="marker-diamond" d="M466,411 l4,4 l-4,4 l-4-4 L466,411"/>
+</g>
+
+<g role="datapoint" tabindex="0">
+  <title role="datavalue" aria-labelledby="x-2012-09">19387</title>
+  <path class="marker-diamond" d="M519,398  l4,4 l-4,4 l-4-4 L519,398"/>  
+</g>
+
+<g role="datapoint" tabindex="0">
+  <title role="datavalue" aria-labelledby="x-2012-10">23490</title>
+  <path class="marker-diamond" d="M571,360 l4,4 l-4,4 l-4-4 L571,360"/>
+</g>
+
+<g role="datapoint" tabindex="0">
+  <title role="datavalue" aria-labelledby="x-2012-11">25873</title>
+  <path class="marker-diamond" d="M624, 338 l4,4 l-4,4 l-4-4  L624,338"/>
+</g>
+
+<g role="datapoint" tabindex="0">
+  <title role="datavalue" aria-labelledby="x-2012-12">28490</title>
+  <path class="marker-diamond" d="M677,314 l4,4 l-4,4 l-4-4 L677,314"/>
+</g> 
+
+</g>
+
+
+</g> <!-- chart -->
+</svg>
