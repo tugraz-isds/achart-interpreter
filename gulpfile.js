@@ -157,9 +157,9 @@ function server()
 
 function guiPublishPages(cb)
 {
-  gh_pages.publish(paths.build,
-    //src: ["samples/", "index.html", "main.css", "samples.txt", files.js]
-  cb);
+  gh_pages.publish(paths.build, {
+    src: ["samples/*", "index.html", "main.css", "samples.txt", files.js]
+  }, cb);
 }
 
 
