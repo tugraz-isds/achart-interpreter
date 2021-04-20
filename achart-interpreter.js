@@ -805,6 +805,7 @@ var Text = /** @class */ (function () {
     Text.SWITCH_TO_APP_MODE = "Switch to Application Mode";
     Text.SWITCH_TO_DOCUMENT_MODE = "Switch to Document Mode";
     Text.HELP = "Help";
+    Text.HAMBURGER_MENU_BUTTON = "Menu";
     Text.PLACEHOLDER_TEXT = "Select an SVG chart to get started.";
     Text.REMOVE_SVG = "Remove SVG";
     Text.CONTAINS = "contains";
@@ -1864,7 +1865,7 @@ var Speech = /** @class */ (function () {
                 }
                 break;
             case "button":
-                text = element.textContent;
+                text = element.getAttribute("aria-label") || element.textContent;
                 text += ", button";
                 break;
             case "input":
@@ -2194,6 +2195,7 @@ var UserInterface = /** @class */ (function () {
     UserInterface.prototype.hamburgerMenu = function () {
         var _this = this;
         var hamburger_menu_button = document.getElementById("hamburger_menu_button");
+        hamburger_menu_button.setAttribute("aria-label", text_en_1.Text.HAMBURGER_MENU_BUTTON);
         hamburger_menu_button.addEventListener("click", function () {
             if (_this.header_container_buttons.classList.contains("show")) {
                 _this.header_container_buttons.classList.remove("show");
