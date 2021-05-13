@@ -1,6 +1,5 @@
-<svg viewBox="0 0 925 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="graphics-document">
-  <style type="text/css">
-    .line {
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 925 600" role="graphics-document">
+  <style type="text/css">.line {
         fill: none;
         stroke-width: 3;
     }
@@ -17,488 +16,273 @@
     .focus circle {
         fill: none;
         stroke: steelblue;
-    }
-  </style>
-  <rect id="backdrop" width="925" height="600" fill="#fff"></rect>
+    }</style>
+  <rect id="backdrop" width="925" height="600" fill="#fff"/>
   <g id="ChartRoot" role="chart" tabindex="0" transform="translate(75,100)" aria-labelledby="title" aria-charttype="line" aria-roledescription="Line Chart">
-    <rect role="chartarea" width="600" height="400" fill="none"></rect>
-    <text id="title" role="heading" text-anchor="middle" font-size="14" x="387.5" y="-25">
-      Price in Austria [€], Price in Germany [€], Price in Spain [€] by Year
-    </text>
+    <rect role="chartarea" width="600" height="400" fill="none"/>
+    <text id="title" role="heading" text-anchor="middle" font-size="14" x="387.5" y="-25">Price in Austria [€], Price in Germany [€], Price in Spain [€] by Year</text>
     <g id="xScale" role="xaxis" aria-roledescription="x-Axis" aria-axistype="" aria-labelledby="x-title" tabindex="0" aria-valuemin="2011" aria-valuemax="2019" transform="translate(0,400)" fill="none" font-size="10" font-family="sans-serif" text-anchor="middle">
-      <text y="50" x="300" text-anchor="middle" fill="black" font-size="12" role="heading" id="x-title">
-        Year
-      </text>
-      <path class="domain" stroke="currentColor" d="M0.5,6V0.5H600.5V6"></path>
+      <text y="50" x="300" text-anchor="middle" fill="black" font-size="12" role="heading" id="x-title">Year</text>
+      <path class="domain" stroke="currentColor" d="M0.5,6V0.5H600.5V6"/>
       <g class="tick" opacity="1" transform="translate(0.5,0)">
-        <line stroke="currentColor" y2="6"></line>
-        <text fill="currentColor" y="9" dy="0.71em" role="axislabel" id="x1">
-          2011
-        </text>
+        <line stroke="currentColor" y2="6"/>
+        <text fill="currentColor" y="9" dy="0.71em" role="axislabel" id="x1">2011</text>
       </g>
       <g class="tick" opacity="1" transform="translate(75.5,0)">
-        <line stroke="currentColor" y2="6"></line>
-        <text fill="currentColor" y="9" dy="0.71em" role="axislabel" id="x2">
-          2012
-        </text>
+        <line stroke="currentColor" y2="6"/>
+        <text fill="currentColor" y="9" dy="0.71em" role="axislabel" id="x2">2012</text>
       </g>
       <g class="tick" opacity="1" transform="translate(150.5,0)">
-        <line stroke="currentColor" y2="6"></line>
-        <text fill="currentColor" y="9" dy="0.71em" role="axislabel" id="x3">
-          2013
-        </text>
+        <line stroke="currentColor" y2="6"/>
+        <text fill="currentColor" y="9" dy="0.71em" role="axislabel" id="x3">2013</text>
       </g>
       <g class="tick" opacity="1" transform="translate(225.5,0)">
-        <line stroke="currentColor" y2="6"></line>
-        <text fill="currentColor" y="9" dy="0.71em" role="axislabel" id="x4">
-          2014
-        </text>
+        <line stroke="currentColor" y2="6"/>
+        <text fill="currentColor" y="9" dy="0.71em" role="axislabel" id="x4">2014</text>
       </g>
       <g class="tick" opacity="1" transform="translate(300.5,0)">
-        <line stroke="currentColor" y2="6"></line>
-        <text fill="currentColor" y="9" dy="0.71em" role="axislabel" id="x5">
-          2015
-        </text>
+        <line stroke="currentColor" y2="6"/>
+        <text fill="currentColor" y="9" dy="0.71em" role="axislabel" id="x5">2015</text>
       </g>
       <g class="tick" opacity="1" transform="translate(375.5,0)">
-        <line stroke="currentColor" y2="6"></line>
-        <text fill="currentColor" y="9" dy="0.71em" role="axislabel" id="x6">
-          2016
-        </text>
+        <line stroke="currentColor" y2="6"/>
+        <text fill="currentColor" y="9" dy="0.71em" role="axislabel" id="x6">2016</text>
       </g>
       <g class="tick" opacity="1" transform="translate(450.5,0)">
-        <line stroke="currentColor" y2="6"></line>
-        <text fill="currentColor" y="9" dy="0.71em" role="axislabel" id="x7">
-          2017
-        </text>
+        <line stroke="currentColor" y2="6"/>
+        <text fill="currentColor" y="9" dy="0.71em" role="axislabel" id="x7">2017</text>
       </g>
       <g class="tick" opacity="1" transform="translate(525.5,0)">
-        <line stroke="currentColor" y2="6"></line>
-        <text fill="currentColor" y="9" dy="0.71em" role="axislabel" id="x8">
-          2018
-        </text>
+        <line stroke="currentColor" y2="6"/>
+        <text fill="currentColor" y="9" dy="0.71em" role="axislabel" id="x8">2018</text>
       </g>
       <g class="tick" opacity="1" transform="translate(600.5,0)">
-        <line stroke="currentColor" y2="6"></line>
-        <text fill="currentColor" y="9" dy="0.71em" role="axislabel" id="x9">
-          2019
-        </text>
+        <line stroke="currentColor" y2="6"/>
+        <text fill="currentColor" y="9" dy="0.71em" role="axislabel" id="x9">2019</text>
       </g>
     </g>
     <g id="yScale" role="yaxis" aria-roledescription="y-Axis" tabindex="0" aria-valuemin="72" aria-valuemax="465" fill="none" font-size="10" font-family="sans-serif" text-anchor="end">
-      <path class="domain" stroke="currentColor" d="M-6,400.5H0.5V0.5H-6"></path>
+      <path class="domain" stroke="currentColor" d="M-6,400.5H0.5V0.5H-6"/>
       <g class="tick" opacity="1" transform="translate(0,372.001)">
-        <line stroke="currentColor" x2="-6"></line>
-        <text fill="currentColor" x="-9" dy="0.32em" role="axislabel" id="y100">
-          100
-        </text>
+        <line stroke="currentColor" x2="-6"/>
+        <text fill="currentColor" x="-9" dy="0.32em" role="axislabel" id="y100">100</text>
       </g>
       <g class="tick" opacity="1" transform="translate(0,321.111)">
-        <line stroke="currentColor" x2="-6"></line>
-        <text fill="currentColor" x="-9" dy="0.32em" role="axislabel" id="y150">
-          150
-        </text>
+        <line stroke="currentColor" x2="-6"/>
+        <text fill="currentColor" x="-9" dy="0.32em" role="axislabel" id="y150">150</text>
       </g>
       <g class="tick" opacity="1" transform="translate(0,270.22)">
-        <line stroke="currentColor" x2="-6"></line>
-        <text fill="currentColor" x="-9" dy="0.32em" role="axislabel" id="y200">
-          200
-        </text>
+        <line stroke="currentColor" x2="-6"/>
+        <text fill="currentColor" x="-9" dy="0.32em" role="axislabel" id="y200">200</text>
       </g>
       <g class="tick" opacity="1" transform="translate(0,219.33)">
-        <line stroke="currentColor" x2="-6"></line>
-        <text fill="currentColor" x="-9" dy="0.32em" role="axislabel" id="y250">
-          250
-        </text>
+        <line stroke="currentColor" x2="-6"/>
+        <text fill="currentColor" x="-9" dy="0.32em" role="axislabel" id="y250">250</text>
       </g>
       <g class="tick" opacity="1" transform="translate(0,168.439)">
-        <line stroke="currentColor" x2="-6"></line>
-        <text fill="currentColor" x="-9" dy="0.32em" role="axislabel" id="y300">
-          300
-        </text>
+        <line stroke="currentColor" x2="-6"/>
+        <text fill="currentColor" x="-9" dy="0.32em" role="axislabel" id="y300">300</text>
       </g>
       <g class="tick" opacity="1" transform="translate(0,117.548)">
-        <line stroke="currentColor" x2="-6"></line>
-        <text fill="currentColor" x="-9" dy="0.32em" role="axislabel" id="y350">
-          350
-        </text>
+        <line stroke="currentColor" x2="-6"/>
+        <text fill="currentColor" x="-9" dy="0.32em" role="axislabel" id="y350">350</text>
       </g>
       <g class="tick" opacity="1" transform="translate(0,66.658)">
-        <line stroke="currentColor" x2="-6"></line>
-        <text fill="currentColor" x="-9" dy="0.32em" role="axislabel" id="y400">
-          400
-        </text>
+        <line stroke="currentColor" x2="-6"/>
+        <text fill="currentColor" x="-9" dy="0.32em" role="axislabel" id="y400">400</text>
       </g>
       <g class="tick" opacity="1" transform="translate(0,15.767)">
-        <line stroke="currentColor" x2="-6"></line>
-        <text fill="currentColor" x="-9" dy="0.32em" role="axislabel" id="y450">
-          450
-        </text>
+        <line stroke="currentColor" x2="-6"/>
+        <text fill="currentColor" x="-9" dy="0.32em" role="axislabel" id="y450">450</text>
       </g>
     </g>
     <g id="dataarea1" role="dataset" aria-roledescription="Data Series" tabindex="0" aria-labelledby="dataset-title1">
-      <title role="heading" id="dataset-title1">
-        Price in Austria [€]
-      </title>
-      <path class="line" d="M0,239.186C25,235.284,50,231.383,75,230.025C100,228.668,125,229.347,150,227.99C175,226.633,200,213.571,225,208.651C250,203.732,275,201.357,300,198.473C325,195.589,350,193.045,375,191.349C400,189.652,425,190.331,450,188.295C475,186.26,500,173.028,525,167.939C550,162.85,575,160.305,600,157.761" stroke="#66c2a5"></path>
+      <title role="heading" id="dataset-title1">Price in Austria [€]</title>
+      <path class="line" d="M0,239.186C25,235.284,50,231.383,75,230.025C100,228.668,125,229.347,150,227.99C175,226.633,200,213.571,225,208.651C250,203.732,275,201.357,300,198.473C325,195.589,350,193.045,375,191.349C400,189.652,425,190.331,450,188.295C475,186.26,500,173.028,525,167.939C550,162.85,575,160.305,600,157.761" stroke="#66c2a5"/>
       <g tabindex="0" role="datapoint" aria-labelledby="name1-1">
-        <title id="tooltip1-1">
-          2011: 230
-        </title>
-        <desc role="heading" id="name1-1">
-          2011
-        </desc>
-        <circle class="dot" cx="0" cy="239.186" r="5" fill="#66c2a5"></circle>
-        <desc role="datavalue" id="value1-1">
-          230
-        </desc>
+        <title>2011: 230</title>
+        <desc role="heading" id="name1-1">2011</desc>
+        <circle class="dot" cx="0" cy="239.186" r="5" fill="#66c2a5"/>
+        <desc role="datavalue" id="value1-1">230</desc>
       </g>
       <g tabindex="0" role="datapoint" aria-labelledby="name1-2">
-        <title id="tooltip1-2">
-          2012: 239
-        </title>
-        <desc role="heading" id="name1-2">
-          2012
-        </desc>
-        <circle class="dot" cx="75" cy="230.025" r="5" fill="#66c2a5"></circle>
-        <desc role="datavalue" id="value1-2">
-          239
-        </desc>
+        <title>2012: 239</title>
+        <desc role="heading" id="name1-2">2012</desc>
+        <circle class="dot" cx="75" cy="230.025" r="5" fill="#66c2a5"/>
+        <desc role="datavalue" id="value1-2">239</desc>
       </g>
       <g tabindex="0" role="datapoint" aria-labelledby="name1-3">
-        <title id="tooltip1-3">
-          2013: 241
-        </title>
-        <desc role="heading" id="name1-3">
-          2013
-        </desc>
-        <circle class="dot" cx="150" cy="227.99" r="5" fill="#66c2a5"></circle>
-        <desc role="datavalue" id="value1-3">
-          241
-        </desc>
+        <title>2013: 241</title>
+        <desc role="heading" id="name1-3">2013</desc>
+        <circle class="dot" cx="150" cy="227.99" r="5" fill="#66c2a5"/>
+        <desc role="datavalue" id="value1-3">241</desc>
       </g>
       <g tabindex="0" role="datapoint" aria-labelledby="name1-4">
-        <title id="tooltip1-4">
-          2014: 260
-        </title>
-        <desc role="heading" id="name1-4">
-          2014
-        </desc>
-        <circle class="dot" cx="225" cy="208.651" r="5" fill="#66c2a5"></circle>
-        <desc role="datavalue" id="value1-4">
-          260
-        </desc>
+        <title>2014: 260</title>
+        <desc role="heading" id="name1-4">2014</desc>
+        <circle class="dot" cx="225" cy="208.651" r="5" fill="#66c2a5"/>
+        <desc role="datavalue" id="value1-4">260</desc>
       </g>
       <g tabindex="0" role="datapoint" aria-labelledby="name1-5">
-        <title id="tooltip1-5">
-          2015: 270
-        </title>
-        <desc role="heading" id="name1-5">
-          2015
-        </desc>
-        <circle class="dot" cx="300" cy="198.473" r="5" fill="#66c2a5"></circle>
-        <desc role="datavalue" id="value1-5">
-          270
-        </desc>
+        <title>2015: 270</title>
+        <desc role="heading" id="name1-5">2015</desc>
+        <circle class="dot" cx="300" cy="198.473" r="5" fill="#66c2a5"/>
+        <desc role="datavalue" id="value1-5">270</desc>
       </g>
       <g tabindex="0" role="datapoint" aria-labelledby="name1-6">
-        <title id="tooltip1-6">
-          2016: 277
-        </title>
-        <desc role="heading" id="name1-6">
-          2016
-        </desc>
-        <circle class="dot" cx="375" cy="191.349" r="5" fill="#66c2a5"></circle>
-        <desc role="datavalue" id="value1-6">
-          277
-        </desc>
+        <title>2016: 277</title>
+        <desc role="heading" id="name1-6">2016</desc>
+        <circle class="dot" cx="375" cy="191.349" r="5" fill="#66c2a5"/>
+        <desc role="datavalue" id="value1-6">277</desc>
       </g>
       <g tabindex="0" role="datapoint" aria-labelledby="name1-7">
-        <title id="tooltip1-7">
-          2017: 280
-        </title>
-        <desc role="heading" id="name1-7">
-          2017
-        </desc>
-        <circle class="dot" cx="450" cy="188.295" r="5" fill="#66c2a5"></circle>
-        <desc role="datavalue" id="value1-7">
-          280
-        </desc>
+        <title>2017: 280</title>
+        <desc role="heading" id="name1-7">2017</desc>
+        <circle class="dot" cx="450" cy="188.295" r="5" fill="#66c2a5"/>
+        <desc role="datavalue" id="value1-7">280</desc>
       </g>
       <g tabindex="0" role="datapoint" aria-labelledby="name1-8">
-        <title id="tooltip1-8">
-          2018: 300
-        </title>
-        <desc role="heading" id="name1-8">
-          2018
-        </desc>
-        <circle class="dot" cx="525" cy="167.939" r="5" fill="#66c2a5"></circle>
-        <desc role="datavalue" id="value1-8">
-          300
-        </desc>
+        <title>2018: 300</title>
+        <desc role="heading" id="name1-8">2018</desc>
+        <circle class="dot" cx="525" cy="167.939" r="5" fill="#66c2a5"/>
+        <desc role="datavalue" id="value1-8">300</desc>
       </g>
       <g tabindex="0" role="datapoint" aria-labelledby="name1-9">
-        <title id="tooltip1-9">
-          2019: 310
-        </title>
-        <desc role="heading" id="name1-9">
-          2019
-        </desc>
-        <circle class="dot" cx="600" cy="157.761" r="5" fill="#66c2a5"></circle>
-        <desc role="datavalue" id="value1-9">
-          310
-        </desc>
+        <title>2019: 310</title>
+        <desc role="heading" id="name1-9">2019</desc>
+        <circle class="dot" cx="600" cy="157.761" r="5" fill="#66c2a5"/>
+        <desc role="datavalue" id="value1-9">310</desc>
       </g>
     </g>
     <g id="dataarea2" role="dataset" aria-roledescription="Data Series" tabindex="0" aria-labelledby="dataset-title2">
-      <title role="heading" id="dataset-title2">
-        Price in Germany [€]
-      </title>
-      <path class="line" d="M0,218.83C25,216.811,50,214.792,75,212.926C100,211.06,125,209.381,150,207.634C175,205.886,200,204.818,225,202.443C250,200.068,275,195.963,300,193.384C325,190.806,350,188.702,375,186.972C400,185.242,425,184.987,450,183.003C475,181.018,500,178.473,525,175.064C550,171.654,575,167.099,600,162.545" stroke="#fc8d62"></path>
+      <title role="heading" id="dataset-title2">Price in Germany [€]</title>
+      <path class="line" d="M0,218.83C25,216.811,50,214.792,75,212.926C100,211.06,125,209.381,150,207.634C175,205.886,200,204.818,225,202.443C250,200.068,275,195.963,300,193.384C325,190.806,350,188.702,375,186.972C400,185.242,425,184.987,450,183.003C475,181.018,500,178.473,525,175.064C550,171.654,575,167.099,600,162.545" stroke="#fc8d62"/>
       <g tabindex="0" role="datapoint" aria-labelledby="name2-1">
-        <title id="tooltip2-1">
-          2011: 250
-        </title>
-        <desc role="heading" id="name2-1">
-          2011
-        </desc>
-        <circle class="dot" cx="0" cy="218.83" r="5" fill="#fc8d62"></circle>
-        <desc role="datavalue" id="value2-1">
-          250
-        </desc>
+        <title>2011: 250</title>
+        <desc role="heading" id="name2-1">2011</desc>
+        <circle class="dot" cx="0" cy="218.83" r="5" fill="#fc8d62"/>
+        <desc role="datavalue" id="value2-1">250</desc>
       </g>
       <g tabindex="0" role="datapoint" aria-labelledby="name2-2">
-        <title id="tooltip2-2">
-          2012: 255.8
-        </title>
-        <desc role="heading" id="name2-2">
-          2012
-        </desc>
-        <circle class="dot" cx="75" cy="212.926" r="5" fill="#fc8d62"></circle>
-        <desc role="datavalue" id="value2-2">
-          255.8
-        </desc>
+        <title>2012: 255.8</title>
+        <desc role="heading" id="name2-2">2012</desc>
+        <circle class="dot" cx="75" cy="212.926" r="5" fill="#fc8d62"/>
+        <desc role="datavalue" id="value2-2">255.8</desc>
       </g>
       <g tabindex="0" role="datapoint" aria-labelledby="name2-3">
-        <title id="tooltip2-3">
-          2013: 261
-        </title>
-        <desc role="heading" id="name2-3">
-          2013
-        </desc>
-        <circle class="dot" cx="150" cy="207.634" r="5" fill="#fc8d62"></circle>
-        <desc role="datavalue" id="value2-3">
-          261
-        </desc>
+        <title>2013: 261</title>
+        <desc role="heading" id="name2-3">2013</desc>
+        <circle class="dot" cx="150" cy="207.634" r="5" fill="#fc8d62"/>
+        <desc role="datavalue" id="value2-3">261</desc>
       </g>
       <g tabindex="0" role="datapoint" aria-labelledby="name2-4">
-        <title id="tooltip2-4">
-          2014: 266.1
-        </title>
-        <desc role="heading" id="name2-4">
-          2014
-        </desc>
-        <circle class="dot" cx="225" cy="202.443" r="5" fill="#fc8d62"></circle>
-        <desc role="datavalue" id="value2-4">
-          266.1
-        </desc>
+        <title>2014: 266.1</title>
+        <desc role="heading" id="name2-4">2014</desc>
+        <circle class="dot" cx="225" cy="202.443" r="5" fill="#fc8d62"/>
+        <desc role="datavalue" id="value2-4">266.1</desc>
       </g>
       <g tabindex="0" role="datapoint" aria-labelledby="name2-5">
-        <title id="tooltip2-5">
-          2015: 275
-        </title>
-        <desc role="heading" id="name2-5">
-          2015
-        </desc>
-        <circle class="dot" cx="300" cy="193.384" r="5" fill="#fc8d62"></circle>
-        <desc role="datavalue" id="value2-5">
-          275
-        </desc>
+        <title>2015: 275</title>
+        <desc role="heading" id="name2-5">2015</desc>
+        <circle class="dot" cx="300" cy="193.384" r="5" fill="#fc8d62"/>
+        <desc role="datavalue" id="value2-5">275</desc>
       </g>
       <g tabindex="0" role="datapoint" aria-labelledby="name2-6">
-        <title id="tooltip2-6">
-          2016: 281.3
-        </title>
-        <desc role="heading" id="name2-6">
-          2016
-        </desc>
-        <circle class="dot" cx="375" cy="186.972" r="5" fill="#fc8d62"></circle>
-        <desc role="datavalue" id="value2-6">
-          281.3
-        </desc>
+        <title>2016: 281.3</title>
+        <desc role="heading" id="name2-6">2016</desc>
+        <circle class="dot" cx="375" cy="186.972" r="5" fill="#fc8d62"/>
+        <desc role="datavalue" id="value2-6">281.3</desc>
       </g>
       <g tabindex="0" role="datapoint" aria-labelledby="name2-7">
-        <title id="tooltip2-7">
-          2017: 285.2
-        </title>
-        <desc role="heading" id="name2-7">
-          2017
-        </desc>
-        <circle class="dot" cx="450" cy="183.003" r="5" fill="#fc8d62"></circle>
-        <desc role="datavalue" id="value2-7">
-          285.2
-        </desc>
+        <title>2017: 285.2</title>
+        <desc role="heading" id="name2-7">2017</desc>
+        <circle class="dot" cx="450" cy="183.003" r="5" fill="#fc8d62"/>
+        <desc role="datavalue" id="value2-7">285.2</desc>
       </g>
       <g tabindex="0" role="datapoint" aria-labelledby="name2-8">
-        <title id="tooltip2-8">
-          2018: 293
-        </title>
-        <desc role="heading" id="name2-8">
-          2018
-        </desc>
-        <circle class="dot" cx="525" cy="175.064" r="5" fill="#fc8d62"></circle>
-        <desc role="datavalue" id="value2-8">
-          293
-        </desc>
+        <title>2018: 293</title>
+        <desc role="heading" id="name2-8">2018</desc>
+        <circle class="dot" cx="525" cy="175.064" r="5" fill="#fc8d62"/>
+        <desc role="datavalue" id="value2-8">293</desc>
       </g>
       <g tabindex="0" role="datapoint" aria-labelledby="name2-9">
-        <title id="tooltip2-9">
-          2019: 305.3
-        </title>
-        <desc role="heading" id="name2-9">
-          2019
-        </desc>
-        <circle class="dot" cx="600" cy="162.545" r="5" fill="#fc8d62"></circle>
-        <desc role="datavalue" id="value2-9">
-          305.3
-        </desc>
+        <title>2019: 305.3</title>
+        <desc role="heading" id="name2-9">2019</desc>
+        <circle class="dot" cx="600" cy="162.545" r="5" fill="#fc8d62"/>
+        <desc role="datavalue" id="value2-9">305.3</desc>
       </g>
     </g>
     <g id="dataarea3" role="dataset" aria-roledescription="Data Series" tabindex="0" aria-labelledby="dataset-title3">
-      <title role="heading" id="dataset-title3">
-        Price in Spain [€]
-      </title>
-      <path class="line" d="M0,320.611C25,322.137,50,323.664,75,324.784C100,325.903,125,327.328,150,327.328C175,327.328,200,322.239,225,319.593C250,316.947,275,315.674,300,311.45C325,307.226,350,299.406,375,294.249C400,289.092,425,284.597,450,280.509C475,276.421,500,273.74,525,269.72C550,265.7,575,261.043,600,256.387" stroke="#8da0cb"></path>
+      <title role="heading" id="dataset-title3">Price in Spain [€]</title>
+      <path class="line" d="M0,320.611C25,322.137,50,323.664,75,324.784C100,325.903,125,327.328,150,327.328C175,327.328,200,322.239,225,319.593C250,316.947,275,315.674,300,311.45C325,307.226,350,299.406,375,294.249C400,289.092,425,284.597,450,280.509C475,276.421,500,273.74,525,269.72C550,265.7,575,261.043,600,256.387" stroke="#8da0cb"/>
       <g tabindex="0" role="datapoint" aria-labelledby="name3-1">
-        <title id="tooltip3-1">
-          2011: 150
-        </title>
-        <desc role="heading" id="name3-1">
-          2011
-        </desc>
-        <circle class="dot" cx="0" cy="320.611" r="5" fill="#8da0cb"></circle>
-        <desc role="datavalue" id="value3-1">
-          150
-        </desc>
+        <title>2011: 150</title>
+        <desc role="heading" id="name3-1">2011</desc>
+        <circle class="dot" cx="0" cy="320.611" r="5" fill="#8da0cb"/>
+        <desc role="datavalue" id="value3-1">150</desc>
       </g>
       <g tabindex="0" role="datapoint" aria-labelledby="name3-2">
-        <title id="tooltip3-2">
-          2012: 145.9
-        </title>
-        <desc role="heading" id="name3-2">
-          2012
-        </desc>
-        <circle class="dot" cx="75" cy="324.784" r="5" fill="#8da0cb"></circle>
-        <desc role="datavalue" id="value3-2">
-          145.9
-        </desc>
+        <title>2012: 145.9</title>
+        <desc role="heading" id="name3-2">2012</desc>
+        <circle class="dot" cx="75" cy="324.784" r="5" fill="#8da0cb"/>
+        <desc role="datavalue" id="value3-2">145.9</desc>
       </g>
       <g tabindex="0" role="datapoint" aria-labelledby="name3-3">
-        <title id="tooltip3-3">
-          2013: 143.4
-        </title>
-        <desc role="heading" id="name3-3">
-          2013
-        </desc>
-        <circle class="dot" cx="150" cy="327.328" r="5" fill="#8da0cb"></circle>
-        <desc role="datavalue" id="value3-3">
-          143.4
-        </desc>
+        <title>2013: 143.4</title>
+        <desc role="heading" id="name3-3">2013</desc>
+        <circle class="dot" cx="150" cy="327.328" r="5" fill="#8da0cb"/>
+        <desc role="datavalue" id="value3-3">143.4</desc>
       </g>
       <g tabindex="0" role="datapoint" aria-labelledby="name3-4">
-        <title id="tooltip3-4">
-          2014: 151
-        </title>
-        <desc role="heading" id="name3-4">
-          2014
-        </desc>
-        <circle class="dot" cx="225" cy="319.593" r="5" fill="#8da0cb"></circle>
-        <desc role="datavalue" id="value3-4">
-          151
-        </desc>
+        <title>2014: 151</title>
+        <desc role="heading" id="name3-4">2014</desc>
+        <circle class="dot" cx="225" cy="319.593" r="5" fill="#8da0cb"/>
+        <desc role="datavalue" id="value3-4">151</desc>
       </g>
       <g tabindex="0" role="datapoint" aria-labelledby="name3-5">
-        <title id="tooltip3-5">
-          2015: 159
-        </title>
-        <desc role="heading" id="name3-5">
-          2015
-        </desc>
-        <circle class="dot" cx="300" cy="311.45" r="5" fill="#8da0cb"></circle>
-        <desc role="datavalue" id="value3-5">
-          159
-        </desc>
+        <title>2015: 159</title>
+        <desc role="heading" id="name3-5">2015</desc>
+        <circle class="dot" cx="300" cy="311.45" r="5" fill="#8da0cb"/>
+        <desc role="datavalue" id="value3-5">159</desc>
       </g>
       <g tabindex="0" role="datapoint" aria-labelledby="name3-6">
-        <title id="tooltip3-6">
-          2016: 175.9
-        </title>
-        <desc role="heading" id="name3-6">
-          2016
-        </desc>
-        <circle class="dot" cx="375" cy="294.249" r="5" fill="#8da0cb"></circle>
-        <desc role="datavalue" id="value3-6">
-          175.9
-        </desc>
+        <title>2016: 175.9</title>
+        <desc role="heading" id="name3-6">2016</desc>
+        <circle class="dot" cx="375" cy="294.249" r="5" fill="#8da0cb"/>
+        <desc role="datavalue" id="value3-6">175.9</desc>
       </g>
       <g tabindex="0" role="datapoint" aria-labelledby="name3-7">
-        <title id="tooltip3-7">
-          2017: 189.4
-        </title>
-        <desc role="heading" id="name3-7">
-          2017
-        </desc>
-        <circle class="dot" cx="450" cy="280.509" r="5" fill="#8da0cb"></circle>
-        <desc role="datavalue" id="value3-7">
-          189.4
-        </desc>
+        <title>2017: 189.4</title>
+        <desc role="heading" id="name3-7">2017</desc>
+        <circle class="dot" cx="450" cy="280.509" r="5" fill="#8da0cb"/>
+        <desc role="datavalue" id="value3-7">189.4</desc>
       </g>
       <g tabindex="0" role="datapoint" aria-labelledby="name3-8">
-        <title id="tooltip3-8">
-          2018: 200
-        </title>
-        <desc role="heading" id="name3-8">
-          2018
-        </desc>
-        <circle class="dot" cx="525" cy="269.72" r="5" fill="#8da0cb"></circle>
-        <desc role="datavalue" id="value3-8">
-          200
-        </desc>
+        <title>2018: 200</title>
+        <desc role="heading" id="name3-8">2018</desc>
+        <circle class="dot" cx="525" cy="269.72" r="5" fill="#8da0cb"/>
+        <desc role="datavalue" id="value3-8">200</desc>
       </g>
       <g tabindex="0" role="datapoint" aria-labelledby="name3-9">
-        <title id="tooltip3-9">
-          2019: 213.1
-        </title>
-        <desc role="heading" id="name3-9">
-          2019
-        </desc>
-        <circle class="dot" cx="600" cy="256.387" r="5" fill="#8da0cb"></circle>
-        <desc role="datavalue" id="value3-9">
-          213.1
-        </desc>
+        <title>2019: 213.1</title>
+        <desc role="heading" id="name3-9">2019</desc>
+        <circle class="dot" cx="600" cy="256.387" r="5" fill="#8da0cb"/>
+        <desc role="datavalue" id="value3-9">213.1</desc>
       </g>
     </g>
     <g role="legend" aria-roledescription="Legend" font-size="10" font-family="sans-serif" text-anchor="start" tabindex="0" aria-labelledby="legend-title" transform="translate(608, 20)">
-      <text role="heading" font-size="12" id="legend-title">
-        Legend
-      </text>
+      <text role="heading" font-size="12" id="legend-title">Legend</text>
       <g role="legenditem" id="legenditem1" transform="translate(0,15)" tabindex="0">
-        <line x2="20" style="stroke-width: 3;" stroke="#66c2a5"></line>
-        <text x="25" alignment-baseline="middle">
-          Price in Austria [€]
-        </text>
+        <line x2="20" style="stroke-width: 3;" stroke="#66c2a5"/>
+        <text x="25" alignment-baseline="middle">Price in Austria [€]</text>
       </g>
       <g role="legenditem" id="legenditem2" transform="translate(0,30)" tabindex="0">
-        <line x2="20" style="stroke-width: 3;" stroke="#fc8d62"></line>
-        <text x="25" alignment-baseline="middle">
-          Price in Germany [€]
-        </text>
+        <line x2="20" style="stroke-width: 3;" stroke="#fc8d62"/>
+        <text x="25" alignment-baseline="middle">Price in Germany [€]</text>
       </g>
       <g role="legenditem" id="legenditem3" transform="translate(0,45)" tabindex="0">
-        <line x2="20" style="stroke-width: 3;" stroke="#8da0cb"></line>
-        <text x="25" alignment-baseline="middle">
-          Price in Spain [€]
-        </text>
+        <line x2="20" style="stroke-width: 3;" stroke="#8da0cb"/>
+        <text x="25" alignment-baseline="middle">Price in Spain [€]</text>
       </g>
     </g>
   </g>

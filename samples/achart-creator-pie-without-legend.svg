@@ -1,88 +1,52 @@
-<svg viewBox="0 0 500 550" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="graphics-document">
-  <rect id="backdrop" width="500" height="550" fill="#fff"></rect>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 500 550" role="graphics-document">
+  <rect id="backdrop" width="500" height="550" fill="#fff"/>
   <g id="ChartRoot" role="chart" tabindex="0" transform="translate(50,100)" aria-labelledby="title" aria-charttype="pie" aria-roledescription="Pie Chart" font-size="10">
-    <rect role="chartarea" width="400" height="400" fill="none"></rect>
-    <text id="title" role="heading" text-anchor="middle" font-size="14" x="200" y="-25">
-      Amount 2013 by Fruit
-    </text>
+    <rect role="chartarea" width="400" height="400" fill="none"/>
+    <text id="title" role="heading" text-anchor="middle" font-size="14" x="200" y="-25">Amount 2013 by Fruit</text>
     <g id="pie-chart" transform="translate(200,200)" role="dataset" aria-labelledby="dataset-title" tabindex="0">
-      <title role="heading" id="dataset-title">
-        Amount 2013
-      </title>
+      <title role="heading" id="dataset-title">Amount 2013</title>
       <g role="datapoint" tabindex="0" aria-labelledby="legenditem1">
-        <path d="M1.225e-14,-200A200,200,0,0,1,131.245,-150.913L0,0Z" fill="#66c2a5" stroke="black" style="opacity: 0.7;"></path>
-        <text transform="translate(45.54,-121.762)" dy="15" style="text-anchor: middle;" role="datavalue" id="value1">
-          9
-        </text>
-        <text id="percentage1" transform="translate(45.54,-121.762)" dy="30" style="text-anchor: middle;">
-          (11.4 %)
-        </text>
+        <path d="M1.225e-14,-200A200,200,0,0,1,131.245,-150.913L0,0Z" fill="#66c2a5" stroke="black" style="opacity: 0.7;"/>
+        <text transform="translate(45.54,-121.762)" dy="15" style="text-anchor: middle;" role="datavalue" id="value1">9</text>
+        <text id="percentage1" transform="translate(45.54,-121.762)" dy="30" style="text-anchor: middle;">(11.4 %)</text>
       </g>
       <g role="datapoint" tabindex="0" aria-labelledby="legenditem2">
-        <path d="M131.245,-150.913A200,200,0,0,1,148.274,134.22L0,0Z" fill="#fc8d62" stroke="black" style="opacity: 0.7;"></path>
-        <text transform="translate(129.769,-7.75)" dy="15" style="text-anchor: middle;" role="datavalue" id="value2">
-          20
-        </text>
-        <text id="percentage2" transform="translate(129.769,-7.75)" dy="30" style="text-anchor: middle;">
-          (25.3 %)
-        </text>
+        <path d="M131.245,-150.913A200,200,0,0,1,148.274,134.22L0,0Z" fill="#fc8d62" stroke="black" style="opacity: 0.7;"/>
+        <text transform="translate(129.769,-7.75)" dy="15" style="text-anchor: middle;" role="datavalue" id="value2">20</text>
+        <text id="percentage2" transform="translate(129.769,-7.75)" dy="30" style="text-anchor: middle;">(25.3 %)</text>
       </g>
       <g role="datapoint" tabindex="0" aria-labelledby="legenditem3">
-        <path d="M148.274,134.22A200,200,0,0,1,-199.96,3.976L0,0Z" fill="#8da0cb" stroke="black" style="opacity: 0.7;"></path>
-        <text transform="translate(-45.54,121.762)" dy="15" style="text-anchor: middle;" role="datavalue" id="value3">
-          30
-        </text>
-        <text id="percentage3" transform="translate(-45.54,121.762)" dy="30" style="text-anchor: middle;">
-          (38 %)
-        </text>
+        <path d="M148.274,134.22A200,200,0,0,1,-199.96,3.976L0,0Z" fill="#8da0cb" stroke="black" style="opacity: 0.7;"/>
+        <text transform="translate(-45.54,121.762)" dy="15" style="text-anchor: middle;" role="datavalue" id="value3">30</text>
+        <text id="percentage3" transform="translate(-45.54,121.762)" dy="30" style="text-anchor: middle;">(38 %)</text>
       </g>
       <g role="datapoint" tabindex="0" aria-labelledby="legenditem4">
-        <path d="M-199.96,3.976A200,200,0,0,1,-163.194,-115.618L0,0Z" fill="#e78ac3" stroke="black" style="opacity: 0.7;"></path>
-        <text transform="translate(-124.261,-38.201)" dy="15" style="text-anchor: middle;" role="datavalue" id="value4">
-          8
-        </text>
-        <text id="percentage4" transform="translate(-124.261,-38.201)" dy="30" style="text-anchor: middle;">
-          (10.1 %)
-        </text>
+        <path d="M-199.96,3.976A200,200,0,0,1,-163.194,-115.618L0,0Z" fill="#e78ac3" stroke="black" style="opacity: 0.7;"/>
+        <text transform="translate(-124.261,-38.201)" dy="15" style="text-anchor: middle;" role="datavalue" id="value4">8</text>
+        <text id="percentage4" transform="translate(-124.261,-38.201)" dy="30" style="text-anchor: middle;">(10.1 %)</text>
       </g>
       <g role="datapoint" tabindex="0" aria-labelledby="legenditem5">
-        <path d="M-163.194,-115.618A200,200,0,0,1,-3.674e-14,-200L0,0Z" fill="#a6d854" stroke="black" style="opacity: 0.7;"></path>
-        <text transform="translate(-59.709,-115.477)" dy="15" style="text-anchor: middle;" role="datavalue" id="value5">
-          12
-        </text>
-        <text id="percentage5" transform="translate(-59.709,-115.477)" dy="30" style="text-anchor: middle;">
-          (15.2 %)
-        </text>
+        <path d="M-163.194,-115.618A200,200,0,0,1,-3.674e-14,-200L0,0Z" fill="#a6d854" stroke="black" style="opacity: 0.7;"/>
+        <text transform="translate(-59.709,-115.477)" dy="15" style="text-anchor: middle;" role="datavalue" id="value5">12</text>
+        <text id="percentage5" transform="translate(-59.709,-115.477)" dy="30" style="text-anchor: middle;">(15.2 %)</text>
       </g>
     </g>
     <g role="legend" aria-roledescription="Legend" aria-labelledby="legend-title" tabindex="0" transform="translate(200,200)">
-      <desc role="heading" id="legend-title">
-        Fruit
-      </desc>
+      <desc role="heading" id="legend-title">Fruit</desc>
       <g role="legenditem" tabindex="0" id="legenditem1" transform="translate(45.54,-121.762)" style="text-anchor: middle;">
-        <text>
-          Apples
-        </text>
+        <text>Apples</text>
       </g>
       <g role="legenditem" tabindex="0" id="legenditem2" transform="translate(129.769,-7.75)" style="text-anchor: middle;">
-        <text>
-          Bananas
-        </text>
+        <text>Bananas</text>
       </g>
       <g role="legenditem" tabindex="0" id="legenditem3" transform="translate(-45.54,121.762)" style="text-anchor: middle;">
-        <text>
-          Grapefruits
-        </text>
+        <text>Grapefruits</text>
       </g>
       <g role="legenditem" tabindex="0" id="legenditem4" transform="translate(-124.261,-38.201)" style="text-anchor: middle;">
-        <text>
-          Lemons
-        </text>
+        <text>Lemons</text>
       </g>
       <g role="legenditem" tabindex="0" id="legenditem5" transform="translate(-59.709,-115.477)" style="text-anchor: middle;">
-        <text>
-          Oranges
-        </text>
+        <text>Oranges</text>
       </g>
     </g>
   </g>
