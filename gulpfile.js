@@ -4,6 +4,7 @@ const merge = require('merge2');
 const wp = require('webpack');
 const wp_stream = require('webpack-stream');
 const browser_sync = require('browser-sync').create()
+const gh_pages = require('gh-pages');
 const fs = require('fs');
 const clean = require('gulp-clean');
 const nexe = require("nexe");
@@ -154,6 +155,14 @@ function server()
 }
 
 
+function guiPublishPages(cb)
+{
+  gh_pages.publish(paths.build, {
+    src: ["samples/*", "index.html", "main.css", "samples.txt", files.js]
+  }, cb);
+}
+
+
 function nexeBuild(cb)
 {
   
@@ -198,6 +207,8 @@ exports.guiBuild = gulp.series(samplesTxtList, tscAll, webpack, samplesCopy,
 exports.AChartSummariserBuild = gulp.series(tscAll, AChartSummariserCopy);
 
 exports.AChartSummariserBinary = gulp.series(exports.AChartSummariserBuild, nexeBuild);
+
+exports.publish = guiPublishPages;
 
 exports.run = gulp.series(exports.guiBuild, server);
 exports.default = exports.run;

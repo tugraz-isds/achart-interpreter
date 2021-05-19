@@ -22,6 +22,8 @@ export class Text
   
   static readonly HELP = `Help`;
   
+  static readonly HAMBURGER_MENU_BUTTON = `Menu`;
+  
   static readonly PLACEHOLDER_TEXT = `Select an SVG chart to get started.`;
   
   static readonly REMOVE_SVG = `Remove SVG`;

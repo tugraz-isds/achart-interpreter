@@ -545,6 +545,8 @@ export class UserInterface
   {
     let hamburger_menu_button = document.getElementById("hamburger_menu_button");
     
+    hamburger_menu_button.setAttribute("aria-label", Text.HAMBURGER_MENU_BUTTON);
+    
     hamburger_menu_button.addEventListener("click", () =>
     {
       if (this.header_container_buttons.classList.contains("show"))

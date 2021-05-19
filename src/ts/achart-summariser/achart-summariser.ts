@@ -46,8 +46,8 @@ export class AChartSummariser
   {
     
     // Make sure all output is encoded in UTF-8:
-    process.stdout.setEncoding("utf8");
-    process.stderr.setEncoding("utf8");
+    //process.stdout.setEncoding("utf8");
+    //process.stderr.setEncoding("utf8");
     
     // Display programme title and version:
     console.info(`${Text.ACHART_SUMMARISER_TITLE} ${Text.VERSION} ${this.VERSION} \n`);

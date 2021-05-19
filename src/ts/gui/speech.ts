@@ -207,7 +207,7 @@ export class Speech
         break;
         
       case "button":
-        text = element.textContent;
+        text = element.getAttribute("aria-label") || element.textContent;
         text += ", button";
         break;
 

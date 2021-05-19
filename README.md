@@ -36,7 +36,14 @@ markdown plain text to the console.
 
 
 
-## Installation & Setup
+## AChart Interpreter Online
+
+
+The last stable release of AChart Interpreter (GUI version) can be used online at: <https://tugraz-isds.github.io/achart-interpreter>
+
+
+
+## Local Installation & Setup
 
 
 To install AChart Interpreter and AChart Summariser, the following commands are used:
@@ -261,9 +268,26 @@ a different folder. It can be run like this:
 
 
 
+## Updating AChart Interpreter Online
 
 
-### Cleanup
+GitHub Pages is used to host AChart Interpreter as online application. 
+Once AChart Interpreter has been built successfully, this build can be 
+published as new online version using the following command:
+```
+npx gulp publish
+```
+
+Please do so only after verifying that this build is stable and works as 
+intended!
+
+If you're running into authentication / permission problems, see the 
+following:
+<https://superuser.com/questions/1435950/git-gh-pages-deployment-permissions-error-permission-denied-publickey-fatal>
+
+
+
+## Cleanup
 
 To remove all temporary files (`build/*`, `node_modules/*`, 
 `packages/*`, `installers/*`, `binaries/*`, `src/ts/build/*`):
