@@ -2,13 +2,22 @@
 Contributors
 ============
 
-Contributors to AChart Interpreter, roughly in chronological order.
 
-* Christopher A. Kopel and Inti Gabriel Mendoza Estrada.
-* Lukas Bodner, Daniel Geiger, and Lorenz Leitner
+The following people have contributed to AChart Creator:
+
+- Keith Andrews
+  [kandrews@iicm.edu](mailto:kandrews@iicm.edu?subject=Rslidy)  
+  Project Leader
+
+* Christopher A. Kopel  
+  Master's Thesis, main developer
+
+* Inti Gabriel Mendoza Estrada  
+
+* Lukas Bodner, Daniel Geiger, and Lorenz Leitner  
+  InfoVis SS 2020 G1
 
 
-
-Inspired by [describler](https://describler.com/)
-from Doug Schepers.
+AChart Creator was inspired by Doug Schepers'
+[describler](http://describler.com/) project.
 
