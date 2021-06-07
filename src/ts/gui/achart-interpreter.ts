@@ -87,12 +87,13 @@ export class AChartInterpreter
         } : undefined;
         
         // If y-axis is present, consider it as values scale,
-        // otherwise consider the first data series:
+        // otherwise consider the first data set:
         let values_scale_title = (chart.axes.y) ? chart.axes.y.title :
             ( (chart.datasets) ? chart.datasets[0].title : "");
         
         this.user_interface.addChart(charts_index,
             chart.root, true, chart.datasets.length,
+            chart.datagroups.length,
             Message.getChartSummary(chart.type, chart.title,
             chart.datasets.length, true, charts_index_of_type),
             Message.getChartDescription(chart.type, values_scale_title,
@@ -143,7 +144,7 @@ export class AChartInterpreter
         }
         
         
-        // Add all data series of each chart to the web interface
+        // Add all data sets of each chart to the web interface
         
         for (let datasets_index = 0; datasets_index < chart.datasets.length;
             datasets_index++)
@@ -165,6 +166,29 @@ export class AChartInterpreter
           }
           
         }
+
+        // Add all data series of each chart to the web interface
+        
+        for (let datagroups_index = 0; datagroups_index < chart.datagroups.length;
+          datagroups_index++)
+        {
+          let datagroup = chart.datagroups[datagroups_index];
+          
+          this.user_interface.addDataset(charts_index, datagroups_index,
+              datagroup.svg_element, true,
+              datagroup.datapoints.length, Message.getDatasetSummary(
+              datagroup.title, datagroup.datapoints.length, true,
+              datagroups_index), "datagroups");
+          
+          if (datagroup.datapoints.length)
+          {
+            this.user_interface.initDataList(charts_index, datagroups_index,
+              datagroup.title);
+            this.listDatapoints(charts_index, datagroups_index,
+                Sorting.NONE, 0, "datagroups");
+          }
+          
+        }
       
       }
       
@@ -181,15 +205,16 @@ export class AChartInterpreter
   // ---
   
   listDatapoints(chart_index : number, dataset_index : number,
-      sort : Sorting, focused_datapoint : number) : void
+      sort : Sorting, focused_datapoint : number, 
+      dataset_type : string="datasets") : void
   {
     // Access the data points either in increasing order or in the original order
     // as in the chart, depending on the specified sorting mode:
     let datapoints = (sort !== Sorting.NONE) ?
-        this.svg_document.all_charts[chart_index].datasets[dataset_index]
+        this.svg_document.all_charts[chart_index][dataset_type][dataset_index]
             .datapoints_sorted_upwards
             : this.svg_document.all_charts[chart_index]
-            .datasets[dataset_index].datapoints;
+            [dataset_type][dataset_index].datapoints;
     if (sort === Sorting.DOWNWARDS)
     {
       datapoints = datapoints.slice().reverse();
@@ -204,7 +229,7 @@ export class AChartInterpreter
       this.user_interface.addDatapoint(chart_index, dataset_index,
           datapoints_index, datapoint.true_index, datapoint.svg_element,
           Message.getKeyValueItem(datapoint.label_text,
-          datapoint.value_text, datapoint.true_index+1, datapoints.length));
+          datapoint.value_text, datapoint.true_index+1, datapoints.length), dataset_type);
       datapoint_positions[datapoint.true_index] = datapoints_index;
     }
     
@@ -220,10 +245,10 @@ export class AChartInterpreter
   // index: The index of the chart and data series whose statistics shall be displayed.
   // ---
   
-  showDatasetStatistics(index : DataIndex)
+  showDatasetStatistics(index : DataIndex, dataset_type : string = "datasets")
   {
     this.user_interface.showDetails( Message.getStatisticsList(index.dataset,
-        this.svg_document.all_charts[index.chart].datasets[index.dataset]
+        this.svg_document.all_charts[index.chart][dataset_type][index.dataset]
         .getStatistics()));
   }
   
@@ -235,9 +260,10 @@ export class AChartInterpreter
   // sorting: Specifies how the list view of the data series is sorted.
   // ---
   
-  compareToRestOfDataset(index : DataIndex, sorting : Sorting) : void
+  compareToRestOfDataset(index : DataIndex, sorting : Sorting,
+    dataset_type : string="datasets") : void
   {
-    let dataset = this.svg_document.all_charts[index.chart].datasets[index
+    let dataset = this.svg_document.all_charts[index.chart][dataset_type][index
         .dataset];
     
     // Get the label of the data point to be compared;
@@ -256,9 +282,10 @@ export class AChartInterpreter
   // sorting: Specifies how the list view of the data series is sorted.
   // ---
   
-  compareToStatistics(index : DataIndex, sorting : Sorting) : void
+  compareToStatistics(index : DataIndex, sorting : Sorting,
+    dataset_type : string="datasets") : void
   {
-    let dataset = this.svg_document.all_charts[index.chart].datasets[index
+    let dataset = this.svg_document.all_charts[index.chart][dataset_type][index
         .dataset];
     
     // Get the label of the data point to be compared;

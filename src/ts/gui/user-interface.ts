@@ -8,12 +8,13 @@ import { Helper } from "./helper";
 
 
 
-// Interface for denoting the indices of a chart, data series, or data point
+// Interface for denoting the indices of a chart, data set, data series, or data point
 
 export interface DataIndex
 {
   chart : number
   dataset? : number
+  datagroup? : number
   datapoint? : number
   list_position? : number
 }
@@ -116,6 +117,7 @@ export class UserInterface
   axes : HTMLElement[][]
   legends : HTMLElement[][]
   datasets : HTMLElement[][]
+  datagroups : HTMLElement[][]
   datapoints : HTMLElement[][][]
   
   // SVG elements of the graphic:
@@ -124,6 +126,7 @@ export class UserInterface
   axes_svg : SVGElement[][]
   legends_svg : SVGElement[][]
   datasets_svg : SVGElement[][]
+  datagroups_svg : SVGElement[][]
   datapoints_svg : SVGElement[][][]
   
   // Graphics element currently highlighted:
@@ -632,12 +635,14 @@ export class UserInterface
     this.axes = new Array<HTMLElement[]>(charts);
     this.legends = new Array<HTMLElement[]>(charts);
     this.datasets = new Array<HTMLElement[]>(charts);
+    this.datagroups = new Array<HTMLElement[]>(charts);
     this.datapoints_sorted = new Array<Sorting[]>(charts);
     this.datapoints = new Array<HTMLElement[][]>(charts);
     this.charts_svg = new Array<SVGElement>(charts);
     this.axes_svg = new Array<SVGElement[]>(charts);
     this.legends_svg = new Array<SVGElement[]>(charts);
     this.datasets_svg = new Array<SVGElement[]>(charts);
+    this.datagroups_svg = new Array<SVGElement[]>(charts);
     this.datapoints_svg = new Array<SVGElement[][]>(charts);
     this.selected_list_position = new Array<number[]>(charts);
     this.selected_datapoint = new Array<number[]>(charts);
@@ -718,7 +723,8 @@ this.node_toggled = false;
   // ---
   
   addChart(index : number, root : SVGElement, one_of_multiple : boolean,
-      datasets : number, summary : string, description? : string) : void
+      datasets : number, datagroups : number, 
+      summary : string, description? : string) : void
   {
     // Avoid crash due to variables not initialised:
     if ( (!this.svg_document) || (!this.charts) || (this.charts.length <= index) )
@@ -745,11 +751,13 @@ this.node_toggled = false;
     this.axes[index] = [];
     this.legends[index] = [];
     this.datasets[index] = new Array(datasets);
+    this.datagroups[index] = new Array(datagroups);
     this.datapoints_sorted[index] = new Array(datasets);
     this.datapoints[index] = new Array(datasets);
     this.axes_svg[index] = [];
     this.legends_svg[index] = [];
     this.datasets_svg[index] = new Array(datasets);
+    this.datagroups_svg[index] = new Array(datagroups);
     this.datapoints_svg[index] = new Array(datasets);
     this.selected_list_position[index] = new Array(datasets);
     this.selected_datapoint[index] = new Array(datasets);
@@ -853,20 +861,21 @@ this.node_toggled = false;
   
   addDataset(chart_index : number, dataset_index : number,
       svg_element : SVGElement, one_of_multiple : boolean,
-      datapoints : number, summary : string, description? : string) : void
+      datapoints : number, summary : string,
+      dataset_type : string="datasets", description? : string) : void
   {
     // Avoid crash due to variables not initialised:
-    if ( (!this.charts) || (!this.charts[chart_index]) || (!this.datasets)
-        || (!this.datasets[chart_index]) ||
-        (this.datasets[chart_index].length <= dataset_index) )
+    if ( (!this.charts) || (!this.charts[chart_index]) || (!this[dataset_type])
+        || (!this[dataset_type][chart_index]) ||
+        (this[dataset_type][chart_index].length <= dataset_index) )
     {
       return;
     }
     
-    this.datasets_svg[chart_index][dataset_index] = svg_element;
+    this[dataset_type + "_svg"][chart_index][dataset_index] = svg_element;
     let dataset = this.createNode(this.charts[chart_index], svg_element,
         one_of_multiple, summary, description);
-    this.datasets[chart_index][dataset_index] = dataset;
+    this[dataset_type][chart_index][dataset_index] = dataset;
     
     svg_element.setAttribute("pointer-events", "bounding-box");
     svg_element.addEventListener("mousedown", (event : MouseEvent) =>
@@ -982,6 +991,14 @@ this.node_toggled = false;
           (<HTMLElement>this.datasets[chart][dataset].parentNode).removeAttribute("role");
         }
       }
+
+      // for (let chart in this.datagroups)
+      // {
+      //   for (let dataset in this.datagroups[chart])
+      //   {
+      //     (<HTMLElement>this.datagroups[chart][dataset].parentNode).removeAttribute("role");
+      //   }
+      // }
       
       app_mode_button.textContent = Text.SWITCH_TO_APP_MODE + " (Alt+A)";
       this.app_mode = false;
@@ -996,6 +1013,15 @@ this.node_toggled = false;
               .setAttribute("role", "application");
         }
       }
+
+      // for (let chart in this.datagroups)
+      // {
+      //   for (let dataset in this.datagroups[chart])
+      //   {
+      //     (<HTMLElement>this.datagroups[chart][dataset].parentNode)
+      //         .setAttribute("role", "application");
+      //   }
+      // }
       
       app_mode_button.textContent = Text.SWITCH_TO_DOCUMENT_MODE + " (Alt+A)";
       this.app_mode = true;
@@ -1056,8 +1082,8 @@ this.node_toggled = false;
   // index: Indices of the data series whose list view is to prepare.
   // ---
   
-  initDataList(chart_index : number, dataset_index : number, title : string)
-      : void
+  initDataList(chart_index : number, dataset_index : number, title : string,
+      dataset_type : string="datasets") : void
   {
     
     // Create an object for the indices of the data series:
@@ -1074,7 +1100,7 @@ this.node_toggled = false;
     // element, so the child element has to be used for adding the options
     // and event listeners:
     let sort = <HTMLSelectElement>Helper.appendHTML(
-        this.datasets[index.chart][index.dataset], HTMLTemplate.SORT_BOX)
+        this[dataset_type][index.chart][index.dataset], HTMLTemplate.SORT_BOX)
         .childNodes[1];
     
     // If speech is enabled, read every selected option element:
@@ -1086,7 +1112,7 @@ this.node_toggled = false;
     // On click, pressing Enter, or Space, apply the selected sorting mode:
     Helper.addActivationListener(sort, (event : UIEvent) =>
     {
-      this.sortDatapoints(index, sort.value);
+      this.sortDatapoints(index, sort.value, dataset_type);
     });
     
     // Just in order to make possible leaving by ESC key in Chrome:
@@ -1096,7 +1122,7 @@ this.node_toggled = false;
     
     // This container remains when the list view is rebuilt for sorting:
     let data_container = Helper.appendHTML(
-        this.datasets[index.chart][index.dataset],
+        this[dataset_type][index.chart][index.dataset],
         HTMLTemplate.LIST_CONTAINER);
     if (title)
     {
@@ -1108,17 +1134,17 @@ this.node_toggled = false;
         HTMLTemplate.DATAPOINT_LIST);
     
     let statistics_button = Helper.appendHTML(
-        this.datasets[index.chart][index.dataset], HTMLTemplate.STATISTICS_BUTTON);
+        this[dataset_type][index.chart][index.dataset], HTMLTemplate.STATISTICS_BUTTON);
     statistics_button.addEventListener("click", (event : MouseEvent) =>
     {
       this.last_focus = statistics_button;
-      this.achart_interpreter.showDatasetStatistics(index);
+      this.achart_interpreter.showDatasetStatistics(index, dataset_type);
     });
 
     // Now that the skeleton of the data series representation is created,
     // assign the data list itself to the data series variable so that it
     // can be used for adding data points:
-    this.datasets[index.chart][index.dataset] = data_list;
+    this[dataset_type][index.chart][index.dataset] = data_list;
     
     
     // Keyboard navigation within a data list view
@@ -1168,7 +1194,7 @@ this.node_toggled = false;
           // and set the focus on the corresponding data point element:
           if (this.datapoint_focus.dataset !== 0)
           {
-            this.datasets[index.chart][--this.datapoint_focus.dataset]
+            this[dataset_type][index.chart][--this.datapoint_focus.dataset]
                 .parentElement.parentElement.setAttribute("open", "true");
             this.datapoints[index.chart][this.datapoint_focus.dataset]
                 [this.datapoint_focus.list_position].focus();
@@ -1182,9 +1208,9 @@ this.node_toggled = false;
           // If the focus is not on the list view of the last series, increment the index
           // and set the focus on the corresponding data point element:
           if (this.datapoint_focus.dataset !==
-              this.datasets[index.chart].length - 1)
+              this[dataset_type][index.chart].length - 1)
           {
-            this.datasets[index.chart][++this.datapoint_focus.dataset]
+            this[dataset_type][index.chart][++this.datapoint_focus.dataset]
                 .parentElement.parentElement.setAttribute("open", "true");
             this.datapoints[index.chart][this.datapoint_focus.dataset]
                 [this.datapoint_focus.list_position].focus();
@@ -1248,11 +1274,12 @@ this.node_toggled = false;
   
   addDatapoint(chart_index : number, dataset_index : number,
       position_index : number, datapoint_index : number,
-      svg_element : SVGElement, description : string) : void
+      svg_element : SVGElement, description : string, 
+      dataset_type : string="datasets") : void
   {
     // Avoid crash due to variables not initialised:
-    if ( (!this.datasets) || (!this.datasets[chart_index]) ||
-        (!this.datasets[chart_index][dataset_index])
+    if ( (!this[dataset_type]) || (!this[dataset_type][chart_index]) ||
+        (!this[dataset_type][chart_index][dataset_index])
         || (!this.datapoints) || (!this.datapoints[chart_index]) ||
         (!this.datapoints[chart_index][dataset_index]) )
     {
@@ -1269,7 +1296,7 @@ this.node_toggled = false;
     };
     
     let datapoint = Helper.appendHTML(
-        this.datasets[index.chart][index.dataset],
+        this[dataset_type][index.chart][index.dataset],
         HTMLTemplate.DATAPOINT);
     
     datapoint.textContent = description;
@@ -1350,12 +1377,13 @@ this.node_toggled = false;
   //                 (according to the enum Sorting).
   // ---
   
-  sortDatapoints(index : DataIndex, sorting_string : string) : void
+  sortDatapoints(index : DataIndex, sorting_string : string, 
+    dataset_type : string="datasets") : void
   {
     let sorting : Sorting = Sorting[sorting_string];
     
     // Avoid crash due to uninitialised variables or invalid sorting specifier:
-    if ( (!this.datasets[index.chart]) || (!this.datasets[index.chart][index.dataset])
+    if ( (!this[dataset_type][index.chart]) || (!this[dataset_type][index.chart][index.dataset])
         || (!this.datapoints[index.chart])
         || (sorting < Sorting.DOWNWARDS) || (sorting > Sorting.UPWARDS) )
     {
@@ -1365,9 +1393,9 @@ this.node_toggled = false;
     delete this.datapoints[index.chart][index.dataset];
     this.datapoints[index.chart][index.dataset] = [];
     
-    let parent = <HTMLElement>this.datasets[index.chart][index.dataset].parentElement;
-    this.datasets[index.chart][index.dataset].remove();
-    this.datasets[index.chart][index.dataset] = Helper.appendHTML(
+    let parent = <HTMLElement>this[dataset_type][index.chart][index.dataset].parentElement;
+    this[dataset_type][index.chart][index.dataset].remove();
+    this[dataset_type][index.chart][index.dataset] = Helper.appendHTML(
         parent, HTMLTemplate.DATAPOINT_LIST);
     
     this.datapoints_sorted[index.chart][index.dataset] = sorting;

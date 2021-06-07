@@ -46,6 +46,7 @@ export class Text
   static readonly CHART_TYPE =
   {
     bar: [`bar charts`, `bar chart`, `Bar chart`],
+    bargrouped: [`grouped bar charts`, `grouped bar chart`, `Grouped bar chart`],
     line: [`line charts`, `line chart`, `Line chart`],
     pie: [`pie charts`, `pie chart`, `Pie chart`],
     scatter: [`scatter plots`, `scatter plot`, `Scatter plot`],
@@ -66,7 +67,8 @@ export class Text
   static readonly FROM = `from`;
   static readonly TO = `to`;
   
-  static readonly DATASET = `Data Series`;
+  static readonly DATASET = `Data Set`;
+  static readonly DATAGROUP = `Data Group`;
   static readonly DATA = `Data Series`;
   static readonly DATASETS = [`data series`, `data series`];
   
