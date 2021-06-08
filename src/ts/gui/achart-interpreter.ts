@@ -143,57 +143,50 @@ export class AChartInterpreter
               legend.labels.length, legend.min, legend.max));
         }
         
-        
-        // Add all data sets of each chart to the web interface
-        
-        for (let datasets_index = 0; datasets_index < chart.datasets.length;
-            datasets_index++)
-        {
-          let dataset = chart.datasets[datasets_index];
-          
-          this.user_interface.addDataset(charts_index, datasets_index,
+        if (chart.datagroups.length == 0) {
+          // Add all data sets of each chart to the web interface
+          for (let datasets_index = 0; datasets_index < chart.datasets.length;
+            datasets_index++) {
+            let dataset = chart.datasets[datasets_index];
+
+            this.user_interface.addDataset(charts_index, datasets_index,
               dataset.svg_element, true,
               dataset.datapoints.length, Message.getDatasetSummary(
-              dataset.title, dataset.datapoints.length, true,
-              datasets_index));
-          
-          if (dataset.datapoints.length)
-          {
-            this.user_interface.initDataList(charts_index, datasets_index,
-                dataset.title);
-            this.listDatapoints(charts_index, datasets_index,
-                Sorting.NONE, 0);
-          }
-          
-        }
+                dataset.title, dataset.datapoints.length, true,
+                datasets_index));
 
-        // Add all data series of each chart to the web interface
-        
-        for (let datagroups_index = 0; datagroups_index < chart.datagroups.length;
-          datagroups_index++)
-        {
-          let datagroup = chart.datagroups[datagroups_index];
-          
-          this.user_interface.addDataset(charts_index, datagroups_index,
+            if (dataset.datapoints.length) {
+              this.user_interface.initDataList(charts_index, datasets_index,
+                dataset.title);
+              this.listDatapoints(charts_index, datasets_index,
+                Sorting.NONE, 0);
+            }
+
+          }
+        } else {
+          // Add all data groups of each chart to the web interface
+          for (let datagroups_index = 0; datagroups_index < chart.datagroups.length;
+            datagroups_index++) {
+            let datagroup = chart.datagroups[datagroups_index];
+
+            console.log(datagroups_index);
+
+            this.user_interface.addDataset(charts_index, datagroups_index,
               datagroup.svg_element, true,
               datagroup.datapoints.length, Message.getDatasetSummary(
-              datagroup.title, datagroup.datapoints.length, true,
-              datagroups_index), "datagroups");
-          
-          if (datagroup.datapoints.length)
-          {
-            this.user_interface.initDataList(charts_index, datagroups_index,
-              datagroup.title);
-            this.listDatapoints(charts_index, datagroups_index,
+                datagroup.title, datagroup.datapoints.length, true,
+                datagroups_index), "datagroups");
+
+            if (datagroup.datapoints.length) {
+              this.user_interface.initDataList(charts_index, datagroups_index,
+                datagroup.title, "datagroups");
+              this.listDatapoints(charts_index, datagroups_index,
                 Sorting.NONE, 0, "datagroups");
+            }
           }
-          
         }
-      
       }
-      
     }
-    
   }
   
   
