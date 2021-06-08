@@ -71,7 +71,8 @@ export class Text
   static readonly DATAGROUP = `Data Group`;
   static readonly DATA = `Data Series`;
   static readonly DATASETS = [`data series`, `data series`];
-  
+  static readonly DATAGROUPS = [`data groups`, `data groups`];
+
   static readonly DATAPOINTS = `Data Points`;
   static readonly ITEMS = [`items`, `item`];
   

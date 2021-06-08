@@ -92,20 +92,28 @@ export class Message
   
   
   static getChartSummary(type : string, title : string, contains_datasets : number,
-      one_of_multiple : boolean = false, index? : number) : string
+      one_of_multiple : boolean = false, dataset_type : string="datasets", index? : number) : string
   {
+    var dataset_type_text = Text.DATASETS;
+    if (dataset_type == "datagroups"){
+      dataset_type_text = Text.DATAGROUPS;
+    }
     let type_string = (type in Text.CHART_TYPE) ? Text.CHART_TYPE[type][2] : Text.CHART_TYPE.other[2];
     
     return Message.getSummary(type_string, title,
-        [{count: contains_datasets, text_array: Text.DATASETS}],
+        [{count: contains_datasets, text_array: dataset_type_text}],
         one_of_multiple, index);
   }
   
   
   static getDatasetSummary(title : string, contains_datapoints : number,
-      one_of_multiple : boolean = false, index? : number) : string
+      one_of_multiple : boolean = false, dataset_type : string="datasets", index? : number) : string
   {
-    return Message.getSummary( ((one_of_multiple) ? Text.DATASET : Text.DATA),
+    var dataset_type_text = Text.DATASET;
+    if (dataset_type == "datagroups"){
+      dataset_type_text = Text.DATAGROUP;
+    }
+    return Message.getSummary( ((one_of_multiple) ? dataset_type_text : Text.DATA),
         title, [{count: contains_datapoints, text_array: Text.ITEMS}],
         one_of_multiple, index);
   }
@@ -219,9 +227,14 @@ export class Message
   }
   
   
-  static getStatisticsList(index : number, statistics : Statistics) :
+  static getStatisticsList(index : number, statistics : Statistics, dataset_type : string="datasets") :
       {title : string, items : string[]}
   {
+    var dataset_type_text = Text.DATASET;
+    if (dataset_type == "datagroups"){
+      dataset_type_text = Text.DATAGROUP;
+    }
+
     let statistics_items : string[] = [];
     
     for (let item in statistics)
@@ -250,7 +263,7 @@ export class Message
     }
     
     return {
-      title: `${Text.STATISTICS_FOR} ${Text.DATASET} ${index+1}`,
+      title: `${Text.STATISTICS_FOR} ${dataset_type_text} ${index+1}`,
       items: statistics_items
     }
   }

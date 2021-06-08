@@ -95,7 +95,7 @@ export class AChartInterpreter
             chart.root, true, chart.datasets.length,
             chart.datagroups.length,
             Message.getChartSummary(chart.type, chart.title,
-            chart.datasets.length, true, charts_index_of_type),
+            chart.datasets.length, true, "datasets", charts_index_of_type),
             Message.getChartDescription(chart.type, values_scale_title,
             names_scale_data));
         
@@ -152,7 +152,7 @@ export class AChartInterpreter
             this.user_interface.addDataset(charts_index, datasets_index,
               dataset.svg_element, true,
               dataset.datapoints.length, Message.getDatasetSummary(
-                dataset.title, dataset.datapoints.length, true,
+                dataset.title, dataset.datapoints.length, true,"datasets",
                 datasets_index));
 
             if (dataset.datapoints.length) {
@@ -174,7 +174,7 @@ export class AChartInterpreter
             this.user_interface.addDataset(charts_index, datagroups_index,
               datagroup.svg_element, true,
               datagroup.datapoints.length, Message.getDatasetSummary(
-                datagroup.title, datagroup.datapoints.length, true,
+                datagroup.title, datagroup.datapoints.length, true, "datagroups",
                 datagroups_index), "datagroups");
 
             if (datagroup.datapoints.length) {
@@ -242,7 +242,7 @@ export class AChartInterpreter
   {
     this.user_interface.showDetails( Message.getStatisticsList(index.dataset,
         this.svg_document.all_charts[index.chart][dataset_type][index.dataset]
-        .getStatistics()));
+        .getStatistics(), dataset_type));
   }
   
   

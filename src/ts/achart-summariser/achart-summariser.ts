@@ -129,7 +129,7 @@ export class AChartSummariser
         
         // Display the chart summary:
         this.output.info(this.LI_MARKER + Message.getChartSummary(
-            chart.type, chart.title, chart.datasets.length, true,
+            chart.type, chart.title, chart.datasets.length, true, "datasets",
             charts_index));
         
         // 2nd indentation level (for chart):
@@ -206,7 +206,7 @@ export class AChartSummariser
           let dataset = chart.datasets[datasets_index];
           this.output.info(this.LI_MARKER + Message.getDatasetSummary(
               dataset.title, dataset.datapoints.length,
-              (chart.datasets.length !== 1), datasets_index));
+              (chart.datasets.length !== 1), "datasets", datasets_index));
           
           
           // Display statistics for this data series, if requested
@@ -214,7 +214,7 @@ export class AChartSummariser
           if (this.show_statistics)
           {
             let statistics_list = Message.getStatisticsList(datasets_index,
-                dataset.getStatistics());
+                dataset.getStatistics(), "datasets");
             
             // 3rd indentation level (for data series):
             this.output.group();
