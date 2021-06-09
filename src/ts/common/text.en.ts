@@ -45,12 +45,13 @@ export class Text
   
   static readonly CHART_TYPE =
   {
-    bar: [`bar charts`, `bar chart`, `Bar chart`],
-    bargrouped: [`grouped bar charts`, `grouped bar chart`, `Grouped bar chart`],
-    line: [`line charts`, `line chart`, `Line chart`],
-    pie: [`pie charts`, `pie chart`, `Pie chart`],
-    scatter: [`scatter plots`, `scatter plot`, `Scatter plot`],
-    other: [`charts of unknown type`, `chart of unknown type`, `Unknown chart`]
+    "bar": [`bar charts`, `bar chart`, `Bar chart`],
+    "bar-grouped": [`grouped bar charts`, `grouped bar chart`, `Grouped bar chart`],
+    "bar-stacked": [`stacked bar charts`, `stacked bar chart`, `Stacked bar chart`],
+    "line": [`line charts`, `line chart`, `Line chart`],
+    "pie": [`pie charts`, `pie chart`, `Pie chart`],
+    "scatter": [`scatter plots`, `scatter plot`, `Scatter plot`],
+    "other": [`charts of unknown type`, `chart of unknown type`, `Unknown chart`]
   };
   
   static readonly SHOWING = `showing`;
@@ -85,6 +86,7 @@ export class Text
   };
   
   static readonly SHOW_DATASET_STATISTICS = `Show statistics for this data series`;
+  static readonly SHOW_DATAGROUP_STATISTICS = `Show statistics for this data group`;
   static readonly HIGHLIGHTING_TOGGLE = `SVG Highlighting Mode`;
   static readonly HIGHLIGHTING_BY = `SVG highlighting by `;
   static readonly HIGHLIGHTING_CHANGED = `SVG Highlighting Mode changed to `;
@@ -149,6 +151,7 @@ export class Text
   };
   
   static readonly IN_DATASET = `in this data series`;
+  static readonly IN_DATAGROUP = `in this data group`;
   
   static readonly EQUAL = `equal`;
   static readonly HIGHER = `higher`;

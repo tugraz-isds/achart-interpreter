@@ -169,8 +169,6 @@ export class AChartInterpreter
             datagroups_index++) {
             let datagroup = chart.datagroups[datagroups_index];
 
-            console.log(datagroups_index);
-
             this.user_interface.addDataset(charts_index, datagroups_index,
               datagroup.svg_element, true,
               datagroup.datapoints.length, Message.getDatasetSummary(

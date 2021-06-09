@@ -1085,6 +1085,11 @@ this.node_toggled = false;
   initDataList(chart_index : number, dataset_index : number, title : string,
       dataset_type : string="datasets") : void
   {
+
+    var dataset_type_button = HTMLTemplate.STATISTICS_BUTTON;
+    if (dataset_type === "datagroups") {
+      dataset_type_button = HTMLTemplate.DATAGROUP_STATISTICS_BUTTON;
+    }
     
     // Create an object for the indices of the data series:
     let index : DataIndex =
@@ -1092,7 +1097,6 @@ this.node_toggled = false;
       chart: chart_index,
       dataset: dataset_index
     };
-    
     
     // Add the combo box for choosing the sorting mode
     
@@ -1134,7 +1138,7 @@ this.node_toggled = false;
         HTMLTemplate.DATAPOINT_LIST);
     
     let statistics_button = Helper.appendHTML(
-        this[dataset_type][index.chart][index.dataset], HTMLTemplate.STATISTICS_BUTTON);
+        this[dataset_type][index.chart][index.dataset], dataset_type_button);
     statistics_button.addEventListener("click", (event : MouseEvent) =>
     {
       this.last_focus = statistics_button;

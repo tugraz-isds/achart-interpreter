@@ -127,6 +127,10 @@ export class HTMLTemplate
   static readonly STATISTICS_BUTTON =
     `<button>${Text.SHOW_DATASET_STATISTICS}</button>`;
 
+  // Button for showing the statistics for a data series:
+  static readonly DATAGROUP_STATISTICS_BUTTON =
+      `<button>${Text.SHOW_DATAGROUP_STATISTICS}</button>`;
+
   // Button for closing a dialog window or the main app window:
   static readonly CLOSE_BUTTON =
     `<button aria-keyshortcuts="Escape" class="close_button">${Text.CLOSE} (ESC)</button>`;
