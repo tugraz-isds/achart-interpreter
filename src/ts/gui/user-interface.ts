@@ -1405,7 +1405,7 @@ this.node_toggled = false;
     this.datapoints_sorted[index.chart][index.dataset] = sorting;
     
     this.achart_interpreter.listDatapoints(index.chart, index.dataset,
-        sorting, this.selected_datapoint[index.chart][index.dataset]);
+        sorting, this.selected_datapoint[index.chart][index.dataset], dataset_type);
     
   }
 
