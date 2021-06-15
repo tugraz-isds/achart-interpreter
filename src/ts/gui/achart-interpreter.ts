@@ -236,9 +236,9 @@ export class AChartInterpreter
   // index: The index of the chart and data series whose statistics shall be displayed.
   // ---
   
-  showDatasetStatistics(index : DataIndex, dataset_type : string = "datasets")
+  showDatasetStatistics(index : DataIndex, title : string, dataset_type : string = "datasets")
   {
-    this.user_interface.showDetails( Message.getStatisticsList(index.dataset,
+    this.user_interface.showDetails( Message.getStatisticsList(index.dataset, title,
         this.svg_document.all_charts[index.chart][dataset_type][index.dataset]
         .getStatistics(), dataset_type));
   }

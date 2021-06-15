@@ -1142,7 +1142,7 @@ this.node_toggled = false;
     statistics_button.addEventListener("click", (event : MouseEvent) =>
     {
       this.last_focus = statistics_button;
-      this.achart_interpreter.showDatasetStatistics(index, dataset_type);
+      this.achart_interpreter.showDatasetStatistics(index, title, dataset_type);
     });
 
     // Now that the skeleton of the data series representation is created,

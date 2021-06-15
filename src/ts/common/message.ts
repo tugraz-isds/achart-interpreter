@@ -227,7 +227,7 @@ export class Message
   }
   
   
-  static getStatisticsList(index : number, statistics : Statistics, dataset_type : string="datasets") :
+  static getStatisticsList(index : number, title : string, statistics : Statistics, dataset_type : string="datasets") :
       {title : string, items : string[]}
   {
     var dataset_type_text = Text.DATASET;
@@ -263,7 +263,7 @@ export class Message
     }
     
     return {
-      title: `${Text.STATISTICS_FOR} ${dataset_type_text} ${index+1}`,
+      title: `${Text.STATISTICS_FOR} ${dataset_type_text} ${index+1}: "${title}"`,
       items: statistics_items
     }
   }

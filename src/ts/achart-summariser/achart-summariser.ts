@@ -213,7 +213,7 @@ export class AChartSummariser
           
           if (this.show_statistics)
           {
-            let statistics_list = Message.getStatisticsList(datasets_index,
+            let statistics_list = Message.getStatisticsList(datasets_index, dataset.title,
                 dataset.getStatistics(), "datasets");
             
             // 3rd indentation level (for data series):
