@@ -1198,8 +1198,11 @@ this.node_toggled = false;
           // and set the focus on the corresponding data point element:
           if (this.datapoint_focus.dataset !== 0)
           {
-            this[dataset_type][index.chart][--this.datapoint_focus.dataset]
-                .parentElement.parentElement.setAttribute("open", "true");
+            let parent = this[dataset_type][index.chart][--this.datapoint_focus.dataset]
+            .parentElement;
+            let datagroup_title = parent.attributes["aria-label"].value;
+            this.speech.speak(datagroup_title);
+            parent.parentElement.setAttribute("open", "true");
             this.datapoints[index.chart][this.datapoint_focus.dataset]
                 [this.datapoint_focus.list_position].focus();
           }
@@ -1214,8 +1217,11 @@ this.node_toggled = false;
           if (this.datapoint_focus.dataset !==
               this[dataset_type][index.chart].length - 1)
           {
-            this[dataset_type][index.chart][++this.datapoint_focus.dataset]
-                .parentElement.parentElement.setAttribute("open", "true");
+            let parent = this[dataset_type][index.chart][++this.datapoint_focus.dataset]
+            .parentElement;
+            let datagroup_title = parent.attributes["aria-label"].value;
+            this.speech.speak(datagroup_title);
+            parent.parentElement.setAttribute("open", "true");
             this.datapoints[index.chart][this.datapoint_focus.dataset]
                 [this.datapoint_focus.list_position].focus();
           }
