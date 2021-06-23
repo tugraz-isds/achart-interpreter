@@ -282,7 +282,7 @@ export class Text
         + `Moreover, you can move to the first or the last item within the data list,
         which might be helpful in case of longer data series.`,
         `Pressing Tab within the list for a certain data series will take you to the button underneath this data list.
-        Using this button, you can obtain statistics about the whole data series.`
+        Using this button, you can obtain statistics about the whole data set or, if present, to the data group or data series respectively.`
       ]
     },
     {
