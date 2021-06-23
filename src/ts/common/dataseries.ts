@@ -4,7 +4,7 @@ import { Comparison, Statistics, StatisticsComparisons, Sorting } from "./interf
 
 
 
-export class Dataset
+export class Dataseries
 {
   
   
@@ -27,7 +27,7 @@ export class Dataset
   {
     this.svg_element = root;
     
-    this.title = Chart.getTitle(root, "dataset", chart_root);
+    this.title = Chart.getTitle(root, "dataseries", chart_root);
     
     let datapoints_index = 0;
     Chart.extractAll(root, "datapoint", (element : SVGElement) =>
