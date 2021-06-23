@@ -1334,6 +1334,10 @@ this.node_toggled = false;
     
     datapoint.addEventListener("focusin", (event : FocusEvent) =>
     {
+      let parent = this[dataset_type][index.chart][this.datapoint_focus.dataset]
+      .parentElement;
+      let datagroup_title = parent.attributes["aria-label"].value;
+      this.speech.speak(datagroup_title);
       event.stopPropagation();
       this.setSVGHighlighting(svg_element, true);
     });
