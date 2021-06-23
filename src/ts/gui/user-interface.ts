@@ -1200,11 +1200,12 @@ this.node_toggled = false;
           {
             let parent = this[dataset_type][index.chart][--this.datapoint_focus.dataset]
             .parentElement;
-            let datagroup_title = parent.attributes["aria-label"].value;
-            this.speech.speak(datagroup_title);
+
             parent.parentElement.setAttribute("open", "true");
             this.datapoints[index.chart][this.datapoint_focus.dataset]
                 [this.datapoint_focus.list_position].focus();
+            // let datagroup_title = parent.attributes["aria-label"].value;
+            // this.speech.speak(datagroup_title);
           }
           break;
           
@@ -1219,8 +1220,8 @@ this.node_toggled = false;
           {
             let parent = this[dataset_type][index.chart][++this.datapoint_focus.dataset]
             .parentElement;
-            let datagroup_title = parent.attributes["aria-label"].value;
-            this.speech.speak(datagroup_title);
+            // let datagroup_title = parent.attributes["aria-label"].value;
+            // this.speech.speak(datagroup_title);
             parent.parentElement.setAttribute("open", "true");
             this.datapoints[index.chart][this.datapoint_focus.dataset]
                 [this.datapoint_focus.list_position].focus();
