@@ -17,6 +17,7 @@ export class SVGDocument
     "line": new Array<Chart>(0),
     "pie": new Array<Chart>(0),
     "scatter": new Array<Chart>(0),
+    "parallel-coordinates": new Array<Chart>(0),
     "other": new Array<Chart>(0)
   }
   

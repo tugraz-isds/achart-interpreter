@@ -51,6 +51,7 @@ export class Text
     "line": [`line charts`, `line chart`, `Line chart`],
     "pie": [`pie charts`, `pie chart`, `Pie chart`],
     "scatter": [`scatter plots`, `scatter plot`, `Scatter plot`],
+    "parallel-coordinates": [`parallel coordinate plots`, `parallel coordinates plot`, `Parallel coordinates plot`],
     "other": [`charts of unknown type`, `chart of unknown type`, `Unknown chart`]
   };
   
