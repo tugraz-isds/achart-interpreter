@@ -11,11 +11,13 @@ export class SVGDocument
   
   charts =
   {
-    bar: new Array<Chart>(0),
-    line: new Array<Chart>(0),
-    pie: new Array<Chart>(0),
-    scatter: new Array<Chart>(0),
-    other: new Array<Chart>(0)
+    "bar": new Array<Chart>(0),
+    "bar-grouped": new Array<Chart>(0),
+    "bar-stacked": new Array<Chart>(0),
+    "line": new Array<Chart>(0),
+    "pie": new Array<Chart>(0),
+    "scatter": new Array<Chart>(0),
+    "other": new Array<Chart>(0)
   }
   
   all_charts : Chart[]
