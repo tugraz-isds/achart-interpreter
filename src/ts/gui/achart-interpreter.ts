@@ -144,43 +144,22 @@ export class AChartInterpreter
         }
         
         if (chart.datagroups.length == 0) {
-          if (chart.dataseries_.length == 0) {
-            // Add all data sets of each chart to the web interface
-            for (let datasets_index = 0; datasets_index < chart.datasets.length;
-                 datasets_index++) {
-              let dataset = chart.datasets[datasets_index];
+          // Add all data sets of each chart to the web interface
+          for (let datasets_index = 0; datasets_index < chart.datasets.length;
+               datasets_index++) {
+            let dataset = chart.datasets[datasets_index];
 
-              this.user_interface.addDataset(charts_index, datasets_index,
-                  dataset.svg_element, true,
-                  dataset.datapoints.length, Message.getDatasetSummary(
-                      dataset.title, dataset.datapoints.length, true,"datasets",
-                      datasets_index));
+            this.user_interface.addDataset(charts_index, datasets_index,
+                dataset.svg_element, true,
+                dataset.datapoints.length, Message.getDatasetSummary(
+                    dataset.title, dataset.datapoints.length, true,"datasets",
+                    datasets_index));
 
-              if (dataset.datapoints.length) {
-                this.user_interface.initDataList(charts_index, datasets_index,
-                    dataset.title);
-                this.listDatapoints(charts_index, datasets_index,
-                    Sorting.NONE, 0);
-              }
-            }
-          } else {
-            // Add all data sets of each chart to the web interface
-            for (let dataseries_index = 0; dataseries_index < chart.dataseries_.length;
-                 dataseries_index++) {
-              let dataseries = chart.datasets[dataseries_index];
-
-              this.user_interface.addDataset(charts_index, dataseries_index,
-                  dataseries.svg_element, true,
-                  dataseries.datapoints.length, Message.getDatasetSummary(
-                      dataseries.title, dataseries.datapoints.length, true,"dataseries_",
-                      dataseries_index));
-
-              if (dataseries.datapoints.length) {
-                this.user_interface.initDataList(charts_index, dataseries_index,
-                    dataseries.title, "dataseries_");
-                this.listDatapoints(charts_index, dataseries_index,
-                    Sorting.NONE, 0, "dataseries_");
-              }
+            if (dataset.datapoints.length) {
+              this.user_interface.initDataList(charts_index, datasets_index,
+                  dataset.title);
+              this.listDatapoints(charts_index, datasets_index,
+                  Sorting.NONE, 0);
             }
           }
         } else {

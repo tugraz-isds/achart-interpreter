@@ -1,5 +1,4 @@
 import { Dataset } from "./dataset";
-import { Dataseries } from "./dataseries";
 import { Datagroup } from "./datagroup";
 import { Axis } from "./axis";
 import { Legend } from "./legend";
@@ -30,9 +29,6 @@ export class Chart
   
   // Data sets:
   datasets : Dataset[] = []
-
-  // Data series_:
-  dataseries_ : Dataseries[] = []
 
   // Data groups:
   datagroups : Datagroup[] = []
@@ -76,11 +72,6 @@ export class Chart
     Chart.extractAll(root, "dataset", (item : SVGElement) =>
     {
       this.datasets.push( new Dataset(item, this.root) );
-    });
-
-    Chart.extractAll(root, "dataseries", (item : SVGElement) =>
-    {
-      this.datasets.push( new Dataseries(item, this.root) );
     });
 
     Chart.extractAll(root, "datagroup", (item : SVGElement) =>
