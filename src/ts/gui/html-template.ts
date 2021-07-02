@@ -68,7 +68,7 @@ export class HTMLTemplate
   // should cover parts of the main window of the app:
   static readonly DIALOG_WINDOW =
     `<div role="dialog" class="details" aria-labelledby="achart_reader_dialog_title">
-      <article role="document"></article>
+      <article role="document" style="overflow: auto"></article>
     </div>`;
   
   // Title for all dialog windows as heading on level 2; focusable for
@@ -117,7 +117,7 @@ export class HTMLTemplate
     </li>`;
   
   // Simple list view for comparisons and statistics:
-  static readonly DETAILS_LIST = `<ul class="scrollable_container" tabindex="-1"></ul>`;
+  static readonly DETAILS_LIST = `<ul class="scrollable_container" tabindex="-1"  style="height: auto"></ul>`;
   
   // Simple list item for comparisons and statistics; focusable for keyboard-only navigation:
   static readonly ITEM =

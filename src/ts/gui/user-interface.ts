@@ -936,7 +936,7 @@ this.node_toggled = false;
   // details.items: Content to be listed, e. g., comparisons or statistics.
   // ---
   
-  showDetails(details : {title : string, items : string[]}) : void
+  showDetails(details : {title : string, items : {}}) : void
   {
     if (this.details)
     {
@@ -953,18 +953,23 @@ this.node_toggled = false;
     this.first_element = title;
     
     this.addCloseButton(dialogue_window);
-    
-    let list = Helper.appendHTML(dialogue_window, HTMLTemplate.DETAILS_LIST);
-    
+
     let item : HTMLElement;
-    for (let detail in details.items)
-    {
-      item = Helper.appendHTML(list, HTMLTemplate.ITEM);
-      item.textContent = details.items[detail];
+    for(let statistic in details.items){
+      if (statistic !== "null"){
+        let description = Helper.appendHTML(dialogue_window, HTMLTemplate.HEADING);
+        description.textContent = statistic;
+      }
+
+      let list = Helper.appendHTML(dialogue_window, HTMLTemplate.DETAILS_LIST);
+
+      for (let detail = 0; detail < details.items[statistic].length; detail++)
+      {
+        item = Helper.appendHTML(list, HTMLTemplate.ITEM);
+        item.textContent = details.items[statistic][detail];
+      }
     }
-    
     this.closeTabCircle(title, item);
-    
     this.details = dialogue_window;
     
     title.focus();
@@ -1335,12 +1340,13 @@ this.node_toggled = false;
     
     datapoint.addEventListener("focusin", (event : FocusEvent) =>
     {
+      event.stopPropagation();
+      this.setSVGHighlighting(svg_element, true);
+
       let parent = this[dataset_type][index.chart][this.datapoint_focus.dataset]
       .parentElement;
       let datagroup_title = parent.attributes["aria-label"].value;
       this.speech.speak(datagroup_title);
-      event.stopPropagation();
-      this.setSVGHighlighting(svg_element, true);
     });
     
     svg_element.setAttribute("pointer-events", "bounding-box");

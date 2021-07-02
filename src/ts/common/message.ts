@@ -207,7 +207,7 @@ export class Message
   }
   
   
-  static getComparisonsList(label : string, comparisons : Comparison[]) : {title : string, items : string[]}
+  static getComparisonsList(label : string, comparisons : Comparison[]) : {title : string, items : {}}
   {
     let comparison_items : string[] = []
     
@@ -222,55 +222,64 @@ export class Message
     
     return {
       title: `${label} ${Text.COMPARED_TO}`,
-      items: comparison_items
+      items: {"null": comparison_items}
     };
   }
   
-  
-  static getStatisticsList(index : number, title : string, statistics : Statistics, dataset_type : string="datasets") :
-      {title : string, items : string[]}
+  static getStatisticsList(index : number, title : string, statistics : Statistics[], dataset_type : string="datasets") :
+      {title : string, items : {}}
   {
     var dataset_type_text = Text.DATASET;
     if (dataset_type == "datagroups"){
       dataset_type_text = Text.DATAGROUP;
     }
 
+    let all_items : {[description : string] : string[]} = {};
     let statistics_items : string[] = [];
-    
-    for (let item in statistics)
+
+    for (let data in statistics)
     {
-      let description : string = Text.STATISTICS[item] || "";
-      
-      let value : string;
-      if (statistics[item].length > 1)
+      let stat_description : string = statistics[data].description? statistics[data].description : null;
+      statistics_items = [];
+
+      for (let item in statistics[data])
       {
-        if (typeof statistics[item][0] === "string")
-        {
-          value = `${statistics[item][1]} ${Text.FOR} "${statistics[item][0]}"`;
+        if (Text.STATISTICS[item]){
+          let description : string = Text.STATISTICS[item] || "";
+          
+          let value : string;
+          if (statistics[data][item].length > 1)
+          {
+            if (typeof statistics[data][item][0] === "string")
+            {
+              value = `${statistics[data][item][1]} ${Text.FOR} "${statistics[data][item][0]}"`;
+            }
+            else
+            {
+              value = statistics[data][item].join(", ");
+            }
+          }
+          else
+          {
+            value = statistics[data][item];
+          }
+          
+          statistics_items.push(Message.getKeyValueItem(description, value));
         }
-        else
-        {
-          value = statistics[item].join(", ");
-        }
-      
-      }
-      else
-      {
-        value = statistics[item];
-      }
-      
-      statistics_items.push(Message.getKeyValueItem(description, value));
+      }  
+      all_items[stat_description] = statistics_items;
     }
-    
+
+    console.log(all_items);
     return {
       title: `${Text.STATISTICS_FOR} ${dataset_type_text} ${index+1}: "${title}"`,
-      items: statistics_items
+      items: all_items
     }
   }
   
   
   static getStatisticsComparisonsList(label : string, comparisons : StatisticsComparisons) :
-      {title : string, items : string[]}
+      {title : string, items : {}}
   {
     let comparison_items : string[] = new Array(0);
     
@@ -323,7 +332,7 @@ export class Message
     
     return {
       title: `${Text.STATISTICS_FOR} "${label}"`,
-      items: comparison_items
+      items: {"null": comparison_items}
     };
   }
   

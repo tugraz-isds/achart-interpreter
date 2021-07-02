@@ -110,7 +110,8 @@ export class Text
     sum: `Sum of all values`,
     mean: `Average`,
     median: `Median`,
-    modes: `Modes`
+    modes: `Modes`,
+    description: null
   };
   
   static readonly MENU_ITEM =

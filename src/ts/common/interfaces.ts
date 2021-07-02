@@ -21,6 +21,7 @@ export interface Statistics
   sum : number
   mean : number
   median : number
+  description?: string
 }
 
 

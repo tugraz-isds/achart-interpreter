@@ -1,10 +1,7 @@
 import { Comparison } from "./interfaces";
-  
 
 export class Datapoint
 {
-  
-  
   static readonly DECIMAL_PRECISION = 2
   static readonly ROUND_FACTOR = 10**(Datapoint.DECIMAL_PRECISION);
   
@@ -13,7 +10,7 @@ export class Datapoint
   value_text : string = ""
   label_text : string = ""
   true_index : number
-  
+  values: {[label: string]: any}
   
   constructor(root : SVGElement, index : number,
       chart_root : SVGElement)
@@ -24,6 +21,7 @@ export class Datapoint
     let label_ids_str = root.getAttribute("aria-labelledby");
     
     let value_element = root.querySelector("[role='datavalue']");
+    
     if (value_element)
     {
       this.value_text = value_element.textContent.trim();
@@ -32,6 +30,21 @@ export class Datapoint
       if (!label_ids_str)
       {
         label_ids_str = value_element.getAttribute("aria-labelledby");
+      }
+
+      this.values = {};
+      while (value_element){
+        let label = value_element.getAttribute("aria-labelledby");
+        if(label){
+          let axis_element = document.getElementById(label);
+          console.log(axis_element)
+          console.log(axis_element.querySelector("[role='heading']") )
+          label = axis_element.querySelector("[role='heading']").textContent  
+        }
+
+        let text = value_element.textContent.trim();
+        this.values[label] = !isNaN(parseFloat(text))?(parseFloat(text.replace(/\,/g,''))) : text;
+        value_element = value_element.nextElementSibling;
       }
     }
     
@@ -49,9 +62,7 @@ export class Datapoint
         }
         this.label_text += label_element.textContent.trim();
       }
-      
     }
-    
   }
   
   
@@ -66,5 +77,4 @@ export class Datapoint
           * Datapoint.ROUND_FACTOR) / Datapoint.ROUND_FACTOR
     };
   }
-  
 }

@@ -119,7 +119,7 @@ export class Dataset
   }
   
   
-  getStatistics() : Statistics
+  getSingleStatistic() : Statistics
   {
     return {
       count: this.datapoints.length,
@@ -130,6 +130,62 @@ export class Dataset
       mean: this.mean,
       median: this.median,
     }
+  }
+  
+  getDatapointStatistic(item : string, label: string) : Statistics
+  {
+    let list = this.datapoints.map(m => m.values[item]);
+    let min_value = Math.min(...list);
+    let max_value = Math.max(...list);
+    console.log(list);
+
+    let min_label = this.datapoints[list.indexOf(min_value)].label_text;
+    let max_label = this.datapoints[list.indexOf(max_value)].label_text;
+
+    let range = Number((max_value - min_value).toFixed(12));
+    let sum = Number((list.reduce((sum, current) => Number(sum) + Number(current))).toFixed(12));
+
+    let mean = Number((sum / list.length).toFixed(12));
+
+    let sorted_list = list.sort();
+    let median = null;
+    if (list.length % 2 == 0){
+      let index1 =(list.length) / 2;
+      let index2 = index1 - 1;
+      median = Number(((sorted_list[index1] + sorted_list[index2]) / 2).toFixed(12));
+    } else {
+      median = sorted_list[(list.length - 1) / 2];
+    }
+
+    return {
+      count: list.length,
+      min: [min_label, Math.min(...list)],
+      max: [max_label, Math.max(...list)],
+      range: range,
+      sum: sum,
+      mean: mean,
+      median: median,
+      description: label
+    }
+  }
+  
+  getStatistics() : Statistics[]
+  {
+    let statistics_list = [];
+    let statistics_number = Object.keys(this.datapoints[0].values).length
+
+    if (statistics_number == 1){
+      statistics_list.push(this.getSingleStatistic());
+    } else {
+      for (let item in this.datapoints[0].values)
+      {
+        if (typeof(this.datapoints[0].values[item]) == "number"){
+          statistics_list.push(this.getDatapointStatistic(item, item));
+        }
+      }
+    }
+
+    return statistics_list;
   }
   
 }
