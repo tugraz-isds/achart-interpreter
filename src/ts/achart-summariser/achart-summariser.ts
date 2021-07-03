@@ -23,6 +23,7 @@ export class AChartSummariser
   readonly LI_MARKER = "- "
   readonly H1_MARKER = "# ";
   readonly H2_MARKER = "## ";
+  readonly H3_MARKER = "### ";
   
   // Command-line arguments:
   input_file = ""
@@ -223,9 +224,16 @@ export class AChartSummariser
             this.output.info("\n" + this.H2_MARKER + statistics_list.title);
             
             // Show all the statistical values:
-            for (let item of statistics_list.items)
+            for (let item in statistics_list.items)
             {
-              this.output.info(this.LI_MARKER + item);
+              console.log("item", item);
+              if (item[0]){
+                this.output.info("\n" + this.H2_MARKER + item);
+              }
+              for (let data of statistics_list.items[item])
+              {
+                this.output.info(this.LI_MARKER + data);
+              }
             }
             
             // Back to 2nd indentation level (for chart):
