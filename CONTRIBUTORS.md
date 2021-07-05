@@ -16,8 +16,9 @@ The following people have contributed to AChart Creator:
 
 * Lukas Bodner, Daniel Geiger, and Lorenz Leitner  
   InfoVis SS 2020 G1
+  
+* Moritz Erlacher, Lisa Habich, Alexander Perko and Markus Stradner InfoVis SS 2021 G1
 
 
 AChart Creator was inspired by Doug Schepers'
 [describler](http://describler.com/) project.
-
