@@ -1,0 +1,369 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 825 600" role="graphics-document">
+  <rect id="backdrop" width="825" height="600" fill="#fff"/>
+  <g id="ChartRoot" role="chart" tabindex="0" transform="translate(100,100)" aria-labelledby="title desc" aria-charttype="bar-grouped" aria-roledescription="Grouped Bar Chart">
+    <desc id="desc">Seats of Political Parties in Austria per Federal state</desc>
+    <rect role="chartarea" width="600" height="400" fill="none"/>
+    <text id="title" role="heading" text-anchor="middle" font-size="14" x="312.5" y="-25">Seats of Political Parties in Austria</text>
+    <g id="xScale" role="xaxis" aria-axistype="category" aria-roledescription="x-Axis" aria-labelledby="x-title" tabindex="0" transform="translate(0,400)" fill="none" font-size="10" font-family="sans-serif" text-anchor="middle">
+      <text y="62.5" x="300" text-anchor="middle" fill="black" font-size="12" role="heading" id="x-title">Federal States</text>
+      <path class="domain" stroke="currentColor" d="M0.5,6V0.5H600.5V6"/>
+      <g class="tick" opacity="1" transform="translate(44.681,0)">
+        <line stroke="currentColor" y2="6"/>
+        <text fill="currentColor" y="9" dy="0.71em" role="axislabel" style="text-anchor: end;" transform="rotate(-45)" id="x1">Burgenland</text>
+      </g>
+      <g class="tick" opacity="1" transform="translate(108.511,0)">
+        <line stroke="currentColor" y2="6"/>
+        <text fill="currentColor" y="9" dy="0.71em" role="axislabel" style="text-anchor: end;" transform="rotate(-45)" id="x2">Kärnten</text>
+      </g>
+      <g class="tick" opacity="1" transform="translate(172.34,0)">
+        <line stroke="currentColor" y2="6"/>
+        <text fill="currentColor" y="9" dy="0.71em" role="axislabel" style="text-anchor: end;" transform="rotate(-45)" id="x3">Niederösterreich</text>
+      </g>
+      <g class="tick" opacity="1" transform="translate(236.17,0)">
+        <line stroke="currentColor" y2="6"/>
+        <text fill="currentColor" y="9" dy="0.71em" role="axislabel" style="text-anchor: end;" transform="rotate(-45)" id="x4">Oberösterreich</text>
+      </g>
+      <g class="tick" opacity="1" transform="translate(300,0)">
+        <line stroke="currentColor" y2="6"/>
+        <text fill="currentColor" y="9" dy="0.71em" role="axislabel" style="text-anchor: end;" transform="rotate(-45)" id="x5">Salzburg</text>
+      </g>
+      <g class="tick" opacity="1" transform="translate(363.83,0)">
+        <line stroke="currentColor" y2="6"/>
+        <text fill="currentColor" y="9" dy="0.71em" role="axislabel" style="text-anchor: end;" transform="rotate(-45)" id="x6">Steiermark</text>
+      </g>
+      <g class="tick" opacity="1" transform="translate(427.66,0)">
+        <line stroke="currentColor" y2="6"/>
+        <text fill="currentColor" y="9" dy="0.71em" role="axislabel" style="text-anchor: end;" transform="rotate(-45)" id="x7">Tirol</text>
+      </g>
+      <g class="tick" opacity="1" transform="translate(491.489,0)">
+        <line stroke="currentColor" y2="6"/>
+        <text fill="currentColor" y="9" dy="0.71em" role="axislabel" style="text-anchor: end;" transform="rotate(-45)" id="x8">Vorarlberg</text>
+      </g>
+      <g class="tick" opacity="1" transform="translate(555.319,0)">
+        <line stroke="currentColor" y2="6"/>
+        <text fill="currentColor" y="9" dy="0.71em" role="axislabel" style="text-anchor: end;" transform="rotate(-45)" id="x9">Wien</text>
+      </g>
+    </g>
+    <g id="yScale" role="yaxis" aria-roledescription="y-Axis" tabindex="0" aria-valuemin="2" aria-valuemax="58" aria-labelledby="y-title" fill="none" font-size="10" font-family="sans-serif" text-anchor="end">
+      <text transform="rotate(-90)" y="-38" x="-200" text-anchor="middle" fill="black" role="heading" id="y-title" font-size="12">Number of  Seats in percent</text>
+      <path class="domain" stroke="currentColor" d="M-6,400.5H0.5V0.5H-6"/>
+      <g class="tick" opacity="1" transform="translate(0,379.071)">
+        <line stroke="currentColor" x2="-6"/>
+        <text fill="currentColor" x="-9" dy="0.32em" style="text-anchor: end;" transform="rotate(0)" id="y1">5</text>
+      </g>
+      <g class="tick" opacity="1" transform="translate(0,343.357)">
+        <line stroke="currentColor" x2="-6"/>
+        <text fill="currentColor" x="-9" dy="0.32em" style="text-anchor: end;" transform="rotate(0)" id="y2">10</text>
+      </g>
+      <g class="tick" opacity="1" transform="translate(0,307.643)">
+        <line stroke="currentColor" x2="-6"/>
+        <text fill="currentColor" x="-9" dy="0.32em" style="text-anchor: end;" transform="rotate(0)" id="y3">15</text>
+      </g>
+      <g class="tick" opacity="1" transform="translate(0,271.929)">
+        <line stroke="currentColor" x2="-6"/>
+        <text fill="currentColor" x="-9" dy="0.32em" style="text-anchor: end;" transform="rotate(0)" id="y4">20</text>
+      </g>
+      <g class="tick" opacity="1" transform="translate(0,236.214)">
+        <line stroke="currentColor" x2="-6"/>
+        <text fill="currentColor" x="-9" dy="0.32em" style="text-anchor: end;" transform="rotate(0)" id="y5">25</text>
+      </g>
+      <g class="tick" opacity="1" transform="translate(0,200.5)">
+        <line stroke="currentColor" x2="-6"/>
+        <text fill="currentColor" x="-9" dy="0.32em" style="text-anchor: end;" transform="rotate(0)" id="y6">30</text>
+      </g>
+      <g class="tick" opacity="1" transform="translate(0,164.786)">
+        <line stroke="currentColor" x2="-6"/>
+        <text fill="currentColor" x="-9" dy="0.32em" style="text-anchor: end;" transform="rotate(0)" id="y7">35</text>
+      </g>
+      <g class="tick" opacity="1" transform="translate(0,129.071)">
+        <line stroke="currentColor" x2="-6"/>
+        <text fill="currentColor" x="-9" dy="0.32em" style="text-anchor: end;" transform="rotate(0)" id="y8">40</text>
+      </g>
+      <g class="tick" opacity="1" transform="translate(0,93.357)">
+        <line stroke="currentColor" x2="-6"/>
+        <text fill="currentColor" x="-9" dy="0.32em" style="text-anchor: end;" transform="rotate(0)" id="y9">45</text>
+      </g>
+      <g class="tick" opacity="1" transform="translate(0,57.643)">
+        <line stroke="currentColor" x2="-6"/>
+        <text fill="currentColor" x="-9" dy="0.32em" style="text-anchor: end;" transform="rotate(0)" id="y10">50</text>
+      </g>
+      <g class="tick" opacity="1" transform="translate(0,21.929)">
+        <line stroke="currentColor" x2="-6"/>
+        <text fill="currentColor" x="-9" dy="0.32em" style="text-anchor: end;" transform="rotate(0)" id="y11">55</text>
+      </g>
+    </g>
+    <g id="dataset" role="dataset" tabindex="0" aria-labelledby="dataset-title">
+      <title role="heading" id="dataset-title">Seats of Political Parties in Austria</title>
+      <g id="datagroup-1" role="datagroup" tabindex="0" aria-labelledby="datagroup-title-1">
+        <title role="heading" id="datagroup-title-1">Burgenland</title>
+        <g tabindex="0" transform="translate(25.532,141)" role="datapoint" aria-labelledby="legenditem1">
+          <rect fill="#63C3D0" width="6.383" height="259"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value1-1">38.26</text>
+        </g>
+        <g tabindex="0" transform="translate(31.915,204.429)" role="datapoint" aria-labelledby="legenditem2">
+          <rect fill="#CE000C" width="6.383" height="195.571"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value1-2">29.38</text>
+        </g>
+        <g tabindex="0" transform="translate(38.298,290.357)" role="datapoint" aria-labelledby="legenditem3">
+          <rect fill="#0056A2" width="6.383" height="109.643"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value1-3">17.35</text>
+        </g>
+        <g tabindex="0" transform="translate(44.681,356.571)" role="datapoint" aria-labelledby="legenditem4">
+          <rect fill="#88B626" width="6.383" height="43.429"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value1-4">8.08</text>
+        </g>
+        <g tabindex="0" transform="translate(51.064,379.429)" role="datapoint" aria-labelledby="legenditem5">
+          <rect fill="#E84188" width="6.383" height="20.571"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value1-5">4.88</text>
+        </g>
+        <g tabindex="0" transform="translate(57.447,399.643)" role="datapoint" aria-labelledby="legenditem6">
+          <rect fill="#DCDCDC" width="6.383" height="0.357"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value1-6">2.05</text>
+        </g>
+      </g>
+      <g id="datagroup-2" role="datagroup" tabindex="0" aria-labelledby="datagroup-title-2">
+        <title role="heading" id="datagroup-title-2">Kärnten</title>
+        <g tabindex="0" transform="translate(89.362,165)" role="datapoint" aria-labelledby="legenditem1">
+          <rect fill="#63C3D0" width="6.383" height="235"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value2-1">34.9</text>
+        </g>
+        <g tabindex="0" transform="translate(95.745,227.429)" role="datapoint" aria-labelledby="legenditem2">
+          <rect fill="#CE000C" width="6.383" height="172.571"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value2-2">26.16</text>
+        </g>
+        <g tabindex="0" transform="translate(102.128,273)" role="datapoint" aria-labelledby="legenditem3">
+          <rect fill="#0056A2" width="6.383" height="127"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value2-3">19.78</text>
+        </g>
+        <g tabindex="0" transform="translate(108.511,346.357)" role="datapoint" aria-labelledby="legenditem4">
+          <rect fill="#88B626" width="6.383" height="53.643"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value2-4">9.51</text>
+        </g>
+        <g tabindex="0" transform="translate(114.894,365.714)" role="datapoint" aria-labelledby="legenditem5">
+          <rect fill="#E84188" width="6.383" height="34.286"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value2-5">6.8</text>
+        </g>
+        <g tabindex="0" transform="translate(121.277,393.929)" role="datapoint" aria-labelledby="legenditem6">
+          <rect fill="#DCDCDC" width="6.383" height="6.071"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value2-6">2.85</text>
+        </g>
+      </g>
+      <g id="datagroup-3" role="datagroup" tabindex="0" aria-labelledby="datagroup-title-3">
+        <title role="heading" id="datagroup-title-3">Niederösterreich</title>
+        <g tabindex="0" transform="translate(153.191,112)" role="datapoint" aria-labelledby="legenditem1">
+          <rect fill="#63C3D0" width="6.383" height="288"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value3-1">42.32</text>
+        </g>
+        <g tabindex="0" transform="translate(159.574,272)" role="datapoint" aria-labelledby="legenditem2">
+          <rect fill="#CE000C" width="6.383" height="128"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value3-2">19.92</text>
+        </g>
+        <g tabindex="0" transform="translate(165.957,297.071)" role="datapoint" aria-labelledby="legenditem3">
+          <rect fill="#0056A2" width="6.383" height="102.929"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value3-3">16.41</text>
+        </g>
+        <g tabindex="0" transform="translate(172.34,336)" role="datapoint" aria-labelledby="legenditem4">
+          <rect fill="#88B626" width="6.383" height="64"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value3-4">10.96</text>
+        </g>
+        <g tabindex="0" transform="translate(178.723,359.5)" role="datapoint" aria-labelledby="legenditem5">
+          <rect fill="#E84188" width="6.383" height="40.5"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value3-5">7.67</text>
+        </g>
+        <g tabindex="0" transform="translate(185.106,394.857)" role="datapoint" aria-labelledby="legenditem6">
+          <rect fill="#DCDCDC" width="6.383" height="5.143"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value3-6">2.72</text>
+        </g>
+      </g>
+      <g id="datagroup-4" role="datagroup" tabindex="0" aria-labelledby="datagroup-title-4">
+        <title role="heading" id="datagroup-title-4">Oberösterreich</title>
+        <g tabindex="0" transform="translate(217.021,151.786)" role="datapoint" aria-labelledby="legenditem1">
+          <rect fill="#63C3D0" width="6.383" height="248.214"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value4-1">36.75</text>
+        </g>
+        <g tabindex="0" transform="translate(223.404,256.071)" role="datapoint" aria-labelledby="legenditem2">
+          <rect fill="#CE000C" width="6.383" height="143.929"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value4-2">22.15</text>
+        </g>
+        <g tabindex="0" transform="translate(229.787,289.286)" role="datapoint" aria-labelledby="legenditem3">
+          <rect fill="#0056A2" width="6.383" height="110.714"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value4-3">17.5</text>
+        </g>
+        <g tabindex="0" transform="translate(236.17,316.286)" role="datapoint" aria-labelledby="legenditem4">
+          <rect fill="#88B626" width="6.383" height="83.714"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value4-4">13.72</text>
+        </g>
+        <g tabindex="0" transform="translate(242.553,362)" role="datapoint" aria-labelledby="legenditem5">
+          <rect fill="#E84188" width="6.383" height="38"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value4-5">7.32</text>
+        </g>
+        <g tabindex="0" transform="translate(248.936,396)" role="datapoint" aria-labelledby="legenditem6">
+          <rect fill="#DCDCDC" width="6.383" height="4"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value4-6">2.56</text>
+        </g>
+      </g>
+      <g id="datagroup-5" role="datagroup" tabindex="0" aria-labelledby="datagroup-title-5">
+        <title role="heading" id="datagroup-title-5">Salzburg</title>
+        <g tabindex="0" transform="translate(280.851,83)" role="datapoint" aria-labelledby="legenditem1">
+          <rect fill="#63C3D0" width="6.383" height="317"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value5-1">46.38</text>
+        </g>
+        <g tabindex="0" transform="translate(287.234,297.429)" role="datapoint" aria-labelledby="legenditem2">
+          <rect fill="#CE000C" width="6.383" height="102.571"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value5-2">16.36</text>
+        </g>
+        <g tabindex="0" transform="translate(293.617,316.5)" role="datapoint" aria-labelledby="legenditem3">
+          <rect fill="#0056A2" width="6.383" height="83.5"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value5-3">13.69</text>
+        </g>
+        <g tabindex="0" transform="translate(300,324.214)" role="datapoint" aria-labelledby="legenditem4">
+          <rect fill="#88B626" width="6.383" height="75.786"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value5-4">12.61</text>
+        </g>
+        <g tabindex="0" transform="translate(306.383,354.071)" role="datapoint" aria-labelledby="legenditem5">
+          <rect fill="#E84188" width="6.383" height="45.929"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value5-5">8.43</text>
+        </g>
+        <g tabindex="0" transform="translate(312.766,396.214)" role="datapoint" aria-labelledby="legenditem6">
+          <rect fill="#DCDCDC" width="6.383" height="3.786"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value5-6">2.53</text>
+        </g>
+      </g>
+      <g id="datagroup-6" role="datagroup" tabindex="0" aria-labelledby="datagroup-title-6">
+        <title role="heading" id="datagroup-title-6">Steiermark</title>
+        <g tabindex="0" transform="translate(344.681,136.429)" role="datapoint" aria-labelledby="legenditem1">
+          <rect fill="#63C3D0" width="6.383" height="263.571"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value6-1">38.9</text>
+        </g>
+        <g tabindex="0" transform="translate(351.064,276.929)" role="datapoint" aria-labelledby="legenditem2">
+          <rect fill="#CE000C" width="6.383" height="123.071"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value6-2">19.23</text>
+        </g>
+        <g tabindex="0" transform="translate(357.447,282.429)" role="datapoint" aria-labelledby="legenditem3">
+          <rect fill="#0056A2" width="6.383" height="117.571"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value6-3">18.46</text>
+        </g>
+        <g tabindex="0" transform="translate(363.83,321.571)" role="datapoint" aria-labelledby="legenditem4">
+          <rect fill="#88B626" width="6.383" height="78.429"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value6-4">12.98</text>
+        </g>
+        <g tabindex="0" transform="translate(370.213,363.571)" role="datapoint" aria-labelledby="legenditem5">
+          <rect fill="#E84188" width="6.383" height="36.429"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value6-5">7.1</text>
+        </g>
+        <g tabindex="0" transform="translate(376.596,390.5)" role="datapoint" aria-labelledby="legenditem6">
+          <rect fill="#DCDCDC" width="6.383" height="9.5"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value6-6">3.33</text>
+        </g>
+      </g>
+      <g id="datagroup-7" role="datagroup" tabindex="0" aria-labelledby="datagroup-title-7">
+        <title role="heading" id="datagroup-title-7">Tirol</title>
+        <g tabindex="0" transform="translate(408.511,87.071)" role="datapoint" aria-labelledby="legenditem1">
+          <rect fill="#63C3D0" width="6.383" height="312.929"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value7-1">45.81</text>
+        </g>
+        <g tabindex="0" transform="translate(414.894,321.286)" role="datapoint" aria-labelledby="legenditem2">
+          <rect fill="#CE000C" width="6.383" height="78.714"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value7-2">13.02</text>
+        </g>
+        <g tabindex="0" transform="translate(421.277,309.357)" role="datapoint" aria-labelledby="legenditem3">
+          <rect fill="#0056A2" width="6.383" height="90.643"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value7-3">14.69</text>
+        </g>
+        <g tabindex="0" transform="translate(427.66,309.214)" role="datapoint" aria-labelledby="legenditem4">
+          <rect fill="#88B626" width="6.383" height="90.786"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value7-4">14.71</text>
+        </g>
+        <g tabindex="0" transform="translate(434.043,351)" role="datapoint" aria-labelledby="legenditem5">
+          <rect fill="#E84188" width="6.383" height="49"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value7-5">8.86</text>
+        </g>
+        <g tabindex="0" transform="translate(440.426,393.5)" role="datapoint" aria-labelledby="legenditem6">
+          <rect fill="#DCDCDC" width="6.383" height="6.5"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value7-6">2.91</text>
+        </g>
+      </g>
+      <g id="datagroup-8" role="datagroup" tabindex="0" aria-labelledby="datagroup-title-8">
+        <title role="heading" id="datagroup-title-8">Vorarlberg</title>
+        <g tabindex="0" transform="translate(472.34,152.714)" role="datapoint" aria-labelledby="legenditem1">
+          <rect fill="#63C3D0" width="6.383" height="247.286"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value8-1">36.62</text>
+        </g>
+        <g tabindex="0" transform="translate(478.723,320.429)" role="datapoint" aria-labelledby="legenditem2">
+          <rect fill="#CE000C" width="6.383" height="79.571"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value8-2">13.14</text>
+        </g>
+        <g tabindex="0" transform="translate(485.106,309.214)" role="datapoint" aria-labelledby="legenditem3">
+          <rect fill="#0056A2" width="6.383" height="90.786"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value8-3">14.71</text>
+        </g>
+        <g tabindex="0" transform="translate(491.489,284.714)" role="datapoint" aria-labelledby="legenditem4">
+          <rect fill="#88B626" width="6.383" height="115.286"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value8-4">18.14</text>
+        </g>
+        <g tabindex="0" transform="translate(497.872,317.429)" role="datapoint" aria-labelledby="legenditem5">
+          <rect fill="#E84188" width="6.383" height="82.571"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value8-5">13.56</text>
+        </g>
+        <g tabindex="0" transform="translate(504.255,386.929)" role="datapoint" aria-labelledby="legenditem6">
+          <rect fill="#DCDCDC" width="6.383" height="13.071"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value8-6">3.83</text>
+        </g>
+      </g>
+      <g id="datagroup-9" role="datagroup" tabindex="0" aria-labelledby="datagroup-title-9">
+        <title role="heading" id="datagroup-title-9">Wien</title>
+        <g tabindex="0" transform="translate(536.17,238.357)" role="datapoint" aria-labelledby="legenditem1">
+          <rect fill="#63C3D0" width="6.383" height="161.643"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value9-1">24.63</text>
+        </g>
+        <g tabindex="0" transform="translate(542.553,220.643)" role="datapoint" aria-labelledby="legenditem2">
+          <rect fill="#CE000C" width="6.383" height="179.357"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value9-2">27.11</text>
+        </g>
+        <g tabindex="0" transform="translate(548.936,322.643)" role="datapoint" aria-labelledby="legenditem3">
+          <rect fill="#0056A2" width="6.383" height="77.357"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value9-3">12.83</text>
+        </g>
+        <g tabindex="0" transform="translate(555.319,266.5)" role="datapoint" aria-labelledby="legenditem4">
+          <rect fill="#88B626" width="6.383" height="133.5"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value9-4">20.69</text>
+        </g>
+        <g tabindex="0" transform="translate(561.702,343.857)" role="datapoint" aria-labelledby="legenditem5">
+          <rect fill="#E84188" width="6.383" height="56.143"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value9-5">9.86</text>
+        </g>
+        <g tabindex="0" transform="translate(568.085,379.429)" role="datapoint" aria-labelledby="legenditem6">
+          <rect fill="#DCDCDC" width="6.383" height="20.571"/>
+          <text x="3.192" y="10" text-anchor="middle" font-size="5" fill="black" role="datavalue" id="value9-6">4.88</text>
+        </g>
+      </g>
+    </g>
+    <g role="legend" aria-roledescription="Legend" font-size="10" font-family="sans-serif" text-anchor="start" tabindex="0" aria-labelledby="legend-title" transform="translate(608, 20)">
+      <text role="heading" font-size="12" id="legend-title">Legend</text>
+      <g role="legenditem" id="legenditem1" transform="translate(0,15)" tabindex="0">
+        <rect x="5" y="-5" width="10" height="10" fill="#63C3D0"/>
+        <text x="25" alignment-baseline="middle">oevp</text>
+      </g>
+      <g role="legenditem" id="legenditem2" transform="translate(0,30)" tabindex="0">
+        <rect x="5" y="-5" width="10" height="10" fill="#CE000C"/>
+        <text x="25" alignment-baseline="middle">spoe</text>
+      </g>
+      <g role="legenditem" id="legenditem3" transform="translate(0,45)" tabindex="0">
+        <rect x="5" y="-5" width="10" height="10" fill="#0056A2"/>
+        <text x="25" alignment-baseline="middle">fpoe</text>
+      </g>
+      <g role="legenditem" id="legenditem4" transform="translate(0,60)" tabindex="0">
+        <rect x="5" y="-5" width="10" height="10" fill="#88B626"/>
+        <text x="25" alignment-baseline="middle">gruene</text>
+      </g>
+      <g role="legenditem" id="legenditem5" transform="translate(0,75)" tabindex="0">
+        <rect x="5" y="-5" width="10" height="10" fill="#E84188"/>
+        <text x="25" alignment-baseline="middle">neos</text>
+      </g>
+      <g role="legenditem" id="legenditem6" transform="translate(0,90)" tabindex="0">
+        <rect x="5" y="-5" width="10" height="10" fill="#DCDCDC"/>
+        <text x="25" alignment-baseline="middle">other</text>
+      </g>
+    </g>
+  </g>
+</svg>
