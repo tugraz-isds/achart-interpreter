@@ -138,9 +138,16 @@ export class AChartInterpreter
         for (let legends_index = 0; legends_index < chart.legends.length; legends_index++)
         {
           let legend = chart.legends[legends_index];
-          this.user_interface.addLegend(charts_index, legends_index,
+
+          if ((typeof legend.min) == "string"){
+            this.user_interface.addLegend(charts_index, legends_index,
+              legend.svg_element, Message.getLegendDescriptionList(legend.title,
+              legend.labels.length, legend.labels));
+          } else {
+            this.user_interface.addLegend(charts_index, legends_index,
               legend.svg_element, Message.getLegendDescription(legend.title,
               legend.labels.length, legend.min, legend.max));
+          }
         }
         
         if (chart.datagroups.length == 0) {

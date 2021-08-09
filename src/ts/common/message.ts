@@ -186,6 +186,33 @@ export class Message
     
     return description;
   }
+
+  static getLegendDescriptionList(title : string, labels : number,
+    list : string[]) : string
+{
+  console.log( list, labels)
+  let description = `${Text.LEGEND}: `;
+  
+  if (title)
+  {
+    description += `"${title}",\n  `;
+  }
+  
+  description += `${Text.CONTAINS} ${labels} ${Text.LABELS}. `;
+
+  for (let index = 0; index < labels; index++){
+    let text = list[index]["textContent"].replace("\n", "");
+    if (index == 0){
+      description += `${text}`;
+    } else if (index != (labels - 1)) {
+      description += `, ${text}`;
+    } else {
+      description += `and ${text}.`;
+    }
+  }  
+  console.log(description)
+  return description;
+}
   
   
   static getKeyValueItem(key : string, value : string, index? : number,
