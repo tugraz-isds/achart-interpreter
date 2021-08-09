@@ -137,10 +137,10 @@ export class Message
       // Append "in relation to" and the x-axis or legend title ;
       // if none is given, insert "values" as placeholder text instead:
       description += `${Text.RELATED_TO} ` + ( (names_scale.title) ?
-          `"${names_scale.title}"\n` : `${Text.SCALE_TITLE_REPLACEMENT} ` );
+          `"${names_scale.title}"\n` : `${Text.SCALE_TITLE_REPLACEMENT}` );
       // End with the range of x-axis or legend values:
-      description += `${Text.FROM} ${names_scale.min} ` +
-          `${Text.TO} ${names_scale.max}`;
+      // description += `${Text.FROM} ${names_scale.min} ` +
+      //     `${Text.TO} ${names_scale.max}`;
     }
     
     return description + ".";
