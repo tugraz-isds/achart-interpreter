@@ -138,8 +138,8 @@ export class AChartSummariser
         
         // If x-axis is present, consider it as names scale, otherwise
         // a possible legend:
-        let names_scale = (chart.axes.x) ? <any>chart.axes.x :
-            ( (chart.legends) ? <any>chart.legends[0] : undefined );
+        let names_scale = chart.axes.x ||
+            ( (chart.legends) ? chart.legends[0] : undefined );
         let names_scale_data = (names_scale) ?
         {
           min: names_scale.min,
@@ -149,7 +149,7 @@ export class AChartSummariser
         
         // If y-axis is present, consider it as values scale,
         // otherwise consider the first data series:
-        let values_scale_title = (chart.axes.y) ? (<any>chart.axes.y).title :
+        let values_scale_title = (chart.axes.y) ? chart.axes.y.title :
             ( (chart.datasets) ? chart.datasets[0].title : "");
         
         // Display the chart description:
@@ -159,17 +159,29 @@ export class AChartSummariser
         // Show x-axis first:
         if (chart.axes.x)
         {
-          this.output.info(this.LI_MARKER + Message.getAxisDescription(
+          if (isNaN(parseFloat(chart.axes.x.min))){
+            this.output.info(this.LI_MARKER + Message.getAxisDescriptionList(
+              "x", chart.axes.x.title, chart.axes.x.type,
+              chart.axes.x.labels.length, chart.axes.x.labels));        
+          } else {
+            this.output.info(this.LI_MARKER + Message.getAxisDescription(
               "x", chart.axes.x.title, chart.axes.x.type,
               chart.axes.x.labels.length, chart.axes.x.min, chart.axes.x.max));
+          }
         }
         
         // Show y-axis second:
         if (chart.axes.y)
         {
-          this.output.info(this.LI_MARKER + Message.getAxisDescription(
+          if (isNaN(parseFloat(chart.axes.y.min))){
+            this.output.info(this.LI_MARKER + Message.getAxisDescriptionList(
               "y", chart.axes.y.title, chart.axes.y.type,
-              chart.axes.y.labels.length, chart.axes.y.min, chart.axes.y.max));
+              chart.axes.y.labels.length, chart.axes.y.labels));
+            } else {
+              this.output.info(this.LI_MARKER + Message.getAxisDescription(
+                "y", chart.axes.y.title, chart.axes.y.type,
+                chart.axes.y.labels.length, chart.axes.y.min, chart.axes.y.max));
+            }          
         }
         
         // Last, show all other possible axes:
@@ -178,9 +190,15 @@ export class AChartSummariser
           let axis = chart.axes.others[axis_index];
           if (axis)
           {
-            this.output.info(this.LI_MARKER + Message.getAxisDescription(
+            if((typeof axis) == "string"){
+              this.output.info(this.LI_MARKER + Message.getAxisDescriptionList(
+                  axis.variable, axis.title, axis.type,
+                  axis.labels.length, axis.labels));
+            } else {
+              this.output.info(this.LI_MARKER + Message.getAxisDescription(
                 axis.variable, axis.title, axis.type,
                 axis.labels.length, axis.min, axis.max));
+            }
           }
         }
         
@@ -190,11 +208,16 @@ export class AChartSummariser
           let legend = chart.legends[legend_index];
           if (legend)
           {
-            this.output.info(this.LI_MARKER +
+            if ((typeof legend.min) == "string"){
+              this.output.info(this.LI_MARKER +
+                Message.getLegendDescriptionList(legend.title,
+                legend.labels.length, legend.labels));
+            } else {
+              this.output.info(this.LI_MARKER +
                 Message.getLegendDescription(legend.title,
                 legend.labels.length, legend.min, legend.max));
+            }          
           }
-          
         }
         this.output.info("");
         

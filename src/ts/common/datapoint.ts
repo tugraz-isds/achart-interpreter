@@ -32,14 +32,17 @@ export class Datapoint
         label_ids_str = value_element.getAttribute("aria-labelledby");
       }
 
+   
+
       this.values = {};
       while (value_element){
         let label = value_element.getAttribute("aria-labelledby");
         if(label){
-          let axis_element = document.getElementById(label);
-          console.log(axis_element)
-          console.log(axis_element.querySelector("[role='heading']") )
-          label = axis_element.querySelector("[role='heading']").textContent  
+          try{         
+            let axis_element = document.getElementById(label);
+            label = axis_element.querySelector("[role='heading']").textContent  
+          } catch (e){
+          }
         }
 
         let text = value_element.textContent.trim();

@@ -5,6 +5,7 @@ import { Helper } from "./helper";
 import { Message } from "../common/message";
 import { Text } from "../common/text.en";
 import { FileLoader } from "./file-loader";
+import { parse } from "path";
 
 
 
@@ -105,19 +106,31 @@ export class AChartInterpreter
         // x-axis first:
         if (chart.axes.x)
         {
-          this.user_interface.addAxis(charts_index,
+          if (isNaN(parseFloat(chart.axes.x.min))){
+            this.user_interface.addAxis(charts_index,
+              chart.axes.x.svg_element, "x", Message.getAxisDescriptionList(
+              "x", chart.axes.x.title, chart.axes.x.type,
+              chart.axes.x.labels.length, chart.axes.x.labels));
+          } else {
+            this.user_interface.addAxis(charts_index,
               chart.axes.x.svg_element, "x", Message.getAxisDescription(
               "x", chart.axes.x.title, chart.axes.x.type,
               chart.axes.x.labels.length, chart.axes.x.min, chart.axes.x.max));
+          }
         }
         
         // y-axis second:
         if (chart.axes.y)
         {
-          this.user_interface.addAxis(charts_index, chart.axes.y.svg_element,
+          if (isNaN(parseFloat(chart.axes.y.min))){
+            this.user_interface.addAxis(charts_index, chart.axes.y.svg_element,
+              "y", Message.getAxisDescriptionList("y", chart.axes.y.title,
+              chart.axes.y.type, chart.axes.y.labels.length, chart.axes.y.labels));
+          } else {
+            this.user_interface.addAxis(charts_index, chart.axes.y.svg_element,
               "y", Message.getAxisDescription("y", chart.axes.y.title,
-              chart.axes.y.type, chart.axes.y.labels.length, chart.axes.y.min,
-              chart.axes.y.max));
+              chart.axes.y.type, chart.axes.y.labels.length, chart.axes.y.min, chart.axes.y.max));
+          }
         }
         
         // Last, all other possible axes:
@@ -126,9 +139,15 @@ export class AChartInterpreter
           let axis = chart.axes.others[axis_index];
           if (axis)
           {
-            this.user_interface.addAxis(charts_index, axis.svg_element, axis.variable,
+            if((typeof axis) == "string"){
+              this.user_interface.addAxis(charts_index, axis.svg_element, axis.variable,
+                Message.getAxisDescriptionList(axis.variable, axis.title,
+                axis.type, axis.labels.length, axis.labels));
+            } else {
+              this.user_interface.addAxis(charts_index, axis.svg_element, axis.variable,
                 Message.getAxisDescription(axis.variable, axis.title,
                 axis.type, axis.labels.length, axis.min, axis.max));
+            }
           }
         }
         

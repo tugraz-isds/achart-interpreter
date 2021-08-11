@@ -169,6 +169,31 @@ export class Message
     
     return description;
   }
+
+  static getAxisDescriptionList(variable : string, title : string, type : string,
+    labels : number, list : string[] ) : string
+{
+  let description = `${variable}-${Text.AXIS}: `;
+
+  if (title)
+  {
+    description += `"${title}",\n  `;
+  }
+  
+  description += `${Text.CONTAINS} ${labels} ${Text.LABELS}. `;
+  
+  for (let index = 0; index < labels; index++){
+    let text = list[index]["textContent"];
+    if (index == 0){
+      description += `${text}`;
+    } else if (index != (labels - 1)) {
+      description += `, ${text}`;
+    } else {
+      description += ` and ${text}.`;
+    }
+  }
+  return description;
+}
   
   
   static getLegendDescription(title : string, labels : number,
@@ -189,30 +214,27 @@ export class Message
 
   static getLegendDescriptionList(title : string, labels : number,
     list : string[]) : string
-{
-  console.log( list, labels)
-  let description = `${Text.LEGEND}: `;
-  
-  if (title)
   {
-    description += `"${title}",\n  `;
-  }
-  
-  description += `${Text.CONTAINS} ${labels} ${Text.LABELS}. `;
-
-  for (let index = 0; index < labels; index++){
-    let text = list[index]["textContent"].replace("\n", "");
-    if (index == 0){
-      description += `${text}`;
-    } else if (index != (labels - 1)) {
-      description += `, ${text}`;
-    } else {
-      description += `and ${text}.`;
+    let description = `${Text.LEGEND}: `;
+    if (title)
+    {
+      description += `"${title}",\n  `;
     }
-  }  
-  console.log(description)
-  return description;
-}
+    
+    description += `${Text.CONTAINS} ${labels} ${Text.LABELS}. `;
+
+    for (let index = 0; index < labels; index++){
+      let text = list[index]["textContent"].replace(/(\s\s+)|(\\n)/g, "");
+      if (index == 0){
+        description += `${text}`;
+      } else if (index != (labels - 1)) {
+        description += `, ${text}`;
+      } else {
+        description += ` and ${text}.`;
+      }
+    }  
+    return description;
+  }
   
   
   static getKeyValueItem(key : string, value : string, index? : number,

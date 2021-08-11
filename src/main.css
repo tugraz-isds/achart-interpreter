@@ -373,7 +373,7 @@ input:checked + .slider:before {
 
 .scrollable_container {
   display: block;
-/*  padding: 1em; */
+ padding: 1em;
   height: 90%;
   overflow: auto;
 }

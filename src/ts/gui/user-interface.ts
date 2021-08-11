@@ -256,7 +256,10 @@ export class UserInterface
     this.graphic_panel.title.textContent = Text.GRAPHIC_PANEL;
     
     this.graphic_panel.content.container = Helper.appendHTML(
-        this.graphic_panel.container, HTMLTemplate.GRAPHIC_PANEL_CONTENT);
+        this.graphic_panel.container, HTMLTemplate.SCROLLABLE_CONTAINER);
+
+    this.graphic_panel.content.container = Helper.appendHTML(
+      this.graphic_panel.content.container, HTMLTemplate.GRAPHIC_PANEL_CONTENT);
     
     // Button for removing an SVG document from the page:
     this.graphic_panel.content.remove_button = Helper.appendHTML(
@@ -779,7 +782,6 @@ this.node_toggled = false;
     {
       return;
     }
-    
     this.axes_svg[index][variable] = svg_element;
     this.axes[index][variable] = Helper.appendHTML(this.charts[index],
         HTMLTemplate.TEXT);
