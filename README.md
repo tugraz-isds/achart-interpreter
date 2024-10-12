@@ -15,6 +15,11 @@ In addition, AChart Interpreter contains a command-line tool called
 AChart Summariser which outputs information about a given SVG chart as
 markdown plain text to the console.
 
+AChart Interpreter works in tandem with a command-line tool
+called AChart Creator, which can be used to create
+semantically enriched acessible SVG charts.
+It can be found at: <https://github.com/tugraz-isds/achart-creator>.
+
 
 
 ## Features
@@ -39,7 +44,8 @@ markdown plain text to the console.
 ## AChart Interpreter Online
 
 
-The last stable release of AChart Interpreter (GUI version) can be used online at: <https://tugraz-isds.github.io/achart-interpreter>
+The last stable release of AChart Interpreter (GUI version) can be used online at:
+<https://tugraz-isds.github.io/achart-interpreter>.
 
 
 
@@ -300,4 +306,29 @@ To remove just all build files (`build/*`, `packages/*`,
 ```
 npx gulp clean
 ```
+
+
+
+
+## Further Information
+
+For a general introduction to the AChart project, see our
+paper at the Vis 2024 Workshop on Accessible Data Visualization:
+
+- Keith Andrews and Christopher Alexander Kopel;<br>
+  *Accessible SVG Charts with AChart*;<br>
+  Proc. 1st Workshop on Accessible Data Visualization,<br>
+  IEEE Vis 2024 (AccessViz 2024), Florida, USA (Virtual);<br>
+  13 Oct 2024.<br>
+  <https://accessviz.github.io/papers.html>
+
+
+For a more detailed description of the AChart project, see
+Chris Kopel's Master's Thesis:
+
+- Christopher Alexander Kopel;<br>
+  *Accessible SVG Charts with AChart Creator and AChart Interpreter*<br>
+  Master's Thesis, Graz University of Technology, Austria;<br>
+  16 May 2021.<br>
+  <https://ftp.isds.tugraz.at/pub/theses/ckopel-2021-msc.pdf>
 
